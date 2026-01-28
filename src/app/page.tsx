@@ -1,65 +1,223 @@
-import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white">
+        <div className="absolute inset-0 bg-[url('/wave-pattern.svg')] opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Where Every Child Learns to Swim with Confidence
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              Professional swim lessons in a safe, nurturing environment. Building water safety skills that last a lifetime.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/classes"
+                className="bg-white text-[var(--primary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
+              >
+                View Our Classes
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white hover:bg-white hover:text-[var(--primary)] px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+        {/* Wave decoration */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+              Why Families Choose Aqua Journey
+            </h2>
+            <p className="text-lg text-[var(--gray)] max-w-2xl mx-auto">
+              We combine expert instruction with a caring approach to help every child succeed in the water.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <div className="text-center p-8 rounded-xl bg-[var(--gray-light)] hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Safety First</h3>
+              <p className="text-[var(--gray)]">
+                Our certified instructors prioritize water safety skills alongside swimming technique.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="text-center p-8 rounded-xl bg-[var(--gray-light)] hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Small Class Sizes</h3>
+              <p className="text-[var(--gray)]">
+                Personalized attention ensures every child gets the support they need to progress.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="text-center p-8 rounded-xl bg-[var(--gray-light)] hover:shadow-lg transition-shadow">
+              <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Fun & Engaging</h3>
+              <p className="text-[var(--gray)]">
+                We make learning to swim enjoyable, building confidence and a love for the water.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Programs Overview */}
+      <section className="py-20 bg-[var(--gray-light)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+              Programs for Every Age
+            </h2>
+            <p className="text-lg text-[var(--gray)] max-w-2xl mx-auto">
+              From infants to school-age children, we have the right program to meet your child where they are.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Infant */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">👶</div>
+              <h3 className="text-lg font-semibold mb-2">Infant</h3>
+              <p className="text-sm text-[var(--gray)] mb-4">Ages 6-18 months</p>
+              <p className="text-[var(--gray)] text-sm">
+                Parent-child classes introducing water comfort and basic safety skills.
+              </p>
+            </div>
+
+            {/* Toddler */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">🧒</div>
+              <h3 className="text-lg font-semibold mb-2">Toddler</h3>
+              <p className="text-sm text-[var(--gray)] mb-4">Ages 18 months - 3 years</p>
+              <p className="text-[var(--gray)] text-sm">
+                Building water confidence with foundational swimming movements.
+              </p>
+            </div>
+
+            {/* Preschool */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">🏊</div>
+              <h3 className="text-lg font-semibold mb-2">Preschool</h3>
+              <p className="text-sm text-[var(--gray)] mb-4">Ages 3-5 years</p>
+              <p className="text-[var(--gray)] text-sm">
+                Developing stroke technique and independent swimming skills.
+              </p>
+            </div>
+
+            {/* School-Age */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">🏅</div>
+              <h3 className="text-lg font-semibold mb-2">School-Age</h3>
+              <p className="text-sm text-[var(--gray)] mb-4">Ages 5+ years</p>
+              <p className="text-[var(--gray)] text-sm">
+                Refining strokes and building endurance for confident swimmers.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              href="/classes"
+              className="inline-flex items-center bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-8 py-4 rounded-lg font-semibold transition-colors"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              View All Classes
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Preview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="text-[var(--secondary)] mb-6">
+              <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+              </svg>
+            </div>
+            <blockquote className="text-2xl md:text-3xl text-[var(--foreground)] mb-6 leading-relaxed">
+              "Our daughter was terrified of the water. After just a few months at Aqua Journey, she's swimming laps and asking to go to the pool every day!"
+            </blockquote>
+            <cite className="text-[var(--gray)] not-italic">
+              — Sarah M., Parent
+            </cite>
+            <div className="mt-8">
+              <Link
+                href="/testimonials"
+                className="text-[var(--primary)] hover:text-[var(--primary-dark)] font-semibold inline-flex items-center"
+              >
+                Read More Testimonials
+                <svg className="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-[var(--secondary)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Start Your Child's Swim Journey?
+          </h2>
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+            Contact us today to learn more about our programs and find the perfect class for your child.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="bg-white text-[var(--secondary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              Get in Touch
+            </Link>
+            <Link
+              href="https://aquajourneyswimschool.com/gift-cards"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white hover:bg-white hover:text-[var(--secondary)] px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              Buy a Gift Card
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }

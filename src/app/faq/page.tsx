@@ -54,7 +54,7 @@ const faqs = [
       },
       {
         q: 'How long until my child learns to swim?',
-        a: 'Although most children learn survival swimming skills after 4-6 weeks of lessons, every child progresses at their own pace. Factors like illness, absences, teething, diet, and previous water experience can affect your child\'s rate of progress. Each skill is taught and mastered before the next is introduced.',
+        a: 'Although most children learn survival swimming skills within 20-30 lessons, every child progresses at their own pace. Factors like consistency, illness, absences, teething, diet, and previous water experience can affect your child\'s rate of progress. Each skill is taught and mastered before the next is introduced.',
       },
     ],
   },

@@ -12,7 +12,7 @@ const faqs = [
     questions: [
       {
         q: 'What age can my child start swim lessons?',
-        a: 'We offer classes for children as young as 6 months old. Our infant classes are parent-child sessions designed to introduce babies to the water in a safe, gentle way.',
+        a: 'We offer classes for children as young as 6 months old. Our infant classes are one-on-one with an instructor, teaching life-saving survival swimming skills from the start.',
       },
       {
         q: 'How do I know which class is right for my child?',
@@ -58,7 +58,7 @@ const faqs = [
       },
       {
         q: 'Do parents need to get in the water?',
-        a: 'For our infant and early toddler classes (typically under 2 years), a parent accompanies the child in the water. As children progress to older age groups, they participate independently.',
+        a: 'No, all of our lessons are one-on-one with a certified instructor. Parents can watch from the viewing area while their child learns.',
       },
       {
         q: 'What if my child is afraid of the water?',

@@ -26,13 +26,13 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-[var(--foreground)] mb-6">Our Story</h2>
               <p className="text-[var(--gray)] mb-4 leading-relaxed">
-                Aqua Journey Swim School was founded with a simple mission: to give every child the opportunity to learn how to swim safely and confidently. We believe that swimming is not just a recreational activity—it's a crucial life skill.
+                For over 15 years, Aqua Journeys Swim School has been helping children in Ormond Beach and the surrounding areas discover the joy of swimming. As a family-owned business, we understand that swimming is an essential life skill that everyone should have the opportunity to learn.
               </p>
               <p className="text-[var(--gray)] mb-4 leading-relaxed">
-                What started as a passion for teaching children water safety has grown into a trusted swim school serving families in our community. We've helped hundreds of children overcome their fear of water and develop swimming skills they'll carry for life.
+                What started as a passion for water safety has grown into one of the most trusted swim schools in the Daytona Beach area. We've helped thousands of children—from infants as young as 6 months to school-age swimmers—develop confidence and skills in the water.
               </p>
               <p className="text-[var(--gray)] leading-relaxed">
-                Every day, we're reminded why we do what we do: seeing a child's face light up when they swim their first stroke independently, watching nervous beginners transform into confident swimmers, and knowing we're equipping families with skills that could one day save a life.
+                Our indoor, heated facility maintains a comfortable 90°F year-round, so lessons never get cancelled due to weather. Every day, we're reminded why we do what we do: seeing a child's face light up when they learn to float independently, watching nervous beginners transform into confident swimmers, and knowing we're equipping families with skills that could one day save a life.
               </p>
             </div>
             <div className="bg-[var(--gray-light)] rounded-2xl p-8 text-center">
@@ -113,8 +113,8 @@ export default function AboutPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">Certified Instructors</h3>
-                <p className="text-[var(--gray)]">All our instructors are certified, background-checked, and trained in the latest teaching methods and water safety protocols.</p>
+                <h3 className="font-semibold text-lg mb-2">Highly Trained Instructors</h3>
+                <p className="text-[var(--gray)]">Each instructor has over 100 hours of in-water training, plus education in child development and behavior. All are certified, insured, and CPR/First Aid certified.</p>
               </div>
             </div>
 
@@ -125,8 +125,8 @@ export default function AboutPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">Small Class Sizes</h3>
-                <p className="text-[var(--gray)]">We keep our student-to-instructor ratio low to ensure every child receives personalized attention and instruction.</p>
+                <h3 className="font-semibold text-lg mb-2">One-on-One Attention</h3>
+                <p className="text-[var(--gray)]">Our private and semi-private lessons ensure your child gets individualized instruction tailored to their unique needs and learning pace.</p>
               </div>
             </div>
 
@@ -149,8 +149,8 @@ export default function AboutPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-2">Family-Friendly Environment</h3>
-                <p className="text-[var(--gray)]">We've created a welcoming space where families feel comfortable and children feel safe to learn and grow.</p>
+                <h3 className="font-semibold text-lg mb-2">Year-Round Indoor Pool</h3>
+                <p className="text-[var(--gray)]">Our indoor heated pool stays at a comfortable 90°F all year—rain or shine. No cancelled lessons due to weather!</p>
               </div>
             </div>
           </div>

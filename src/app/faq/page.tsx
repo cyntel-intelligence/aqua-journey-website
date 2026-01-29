@@ -28,10 +28,6 @@ const faqs = [
         a: 'We offer 10, 15, and 30 minute lessons depending on age and skill level. Shorter lessons are more effective for young children—our one-on-one instruction is intensive, and keeping sessions brief helps maintain focus, prevents fatigue, and leads to faster skill development. Quality over quantity is key to our proven results.',
       },
       {
-        q: 'How many children are in each class?',
-        a: 'We offer one-on-one private instruction. This ensures your child receives fully personalized attention and maximizes their progress in every lesson.',
-      },
-      {
         q: 'What days and times are classes offered?',
         a: 'We offer classes Monday through Thursday from 9am to 7pm, and Friday from 9am to 4pm. We are closed on weekends. Contact us for current availability.',
       },

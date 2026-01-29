@@ -240,6 +240,24 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Map Section */}
+      <section className="bg-[var(--gray-light)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6 text-center">Find Us</h2>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.789!2d-81.0558!3d29.2858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e6d9a8a8a8a8a8%3A0x0!2s721%20S%20Nova%20Rd%2C%20Ormond%20Beach%2C%20FL%2032174!5e0!3m2!1sen!2sus!4v1234567890"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Aqua Journey Swim School Location"
+          className="w-full"
+        ></iframe>
+      </section>
     </>
   );
 }

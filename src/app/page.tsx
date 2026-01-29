@@ -12,7 +12,7 @@ export default function Home() {
               Teaching Life-Saving Skills, One Swimmer at a Time
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Professional swim lessons in a safe, nurturing environment. Building water safety skills that last a lifetime.
+              Professional one-on-one swim lessons in our warm, indoor pools. Building water safety skills that last a lifetime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a

@@ -16,7 +16,7 @@ const faqs = [
       },
       {
         q: 'How do I know which class is right for my child?',
-        a: 'Class placement is based on age and skill level. When you contact us, we\'ll discuss your child\'s experience and comfort level in the water to recommend the best starting point. We can also arrange a brief assessment if needed.',
+        a: 'Our programs are age-based: Infant Survival Swimming (6 months+), Toddler & Young Children (walking to 4 years), School-Age Swimming (5+ years), and Stroke Development for more advanced swimmers. Because our lessons are one-on-one, each lesson is individually geared toward your child\'s unique physical skill, temperament, and way of learning.',
       },
     ],
   },

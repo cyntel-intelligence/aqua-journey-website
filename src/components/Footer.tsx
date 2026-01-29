@@ -46,6 +46,11 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link href="/scholarships" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Scholarships
+                </Link>
+              </li>
             </ul>
           </div>
 

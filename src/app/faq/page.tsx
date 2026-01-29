@@ -88,7 +88,7 @@ const faqs = [
       },
       {
         q: 'What forms of payment do you accept?',
-        a: 'We accept all major credit cards and debit cards. Payment is due at registration for the session.',
+        a: 'We accept all major credit cards and debit cards, as well as cash and checks.',
       },
     ],
   },

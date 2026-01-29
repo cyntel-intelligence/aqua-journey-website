@@ -18,10 +18,6 @@ const faqs = [
         q: 'How do I know which class is right for my child?',
         a: 'Class placement is based on age and skill level. When you contact us, we\'ll discuss your child\'s experience and comfort level in the water to recommend the best starting point. We can also arrange a brief assessment if needed.',
       },
-      {
-        q: 'Do you offer trial lessons?',
-        a: 'Yes! We offer trial lessons so you and your child can experience our teaching style and facility before committing to a full session. Contact us to schedule a trial.',
-      },
     ],
   },
   {

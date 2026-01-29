@@ -75,7 +75,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Certified Instructors</h3>
               <p className="text-[var(--gray)]">
-                Each instructor has 100+ hours of in-water training plus CPR/First Aid certification.
+                100+ hours of in-water training plus education in child development, behavioral psychology, and safety.
               </p>
             </div>
 

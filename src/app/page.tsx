@@ -223,7 +223,11 @@ export default function Home() {
           </div>
           {/* @ts-expect-error Custom element from Behold */}
           <behold-widget feed-id="jmuKnJAnY3sW9kjQkNa8"></behold-widget>
-          <Script src="https://w.behold.so/widget.js" strategy="lazyOnload" />
+          <Script
+            src="https://w.behold.so/widget.js"
+            strategy="afterInteractive"
+            type="module"
+          />
         </div>
       </section>
 

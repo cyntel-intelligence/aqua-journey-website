@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -102,8 +103,69 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Photo Gallery */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">Our Facility & Lessons</h2>
+            <p className="text-lg text-[var(--gray)]">Take a look at what makes Aqua Journey special.</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image
+                src="/images/facility.png"
+                alt="Aqua Journey Swim School facility"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image
+                src="/images/infant-lesson.jpg"
+                alt="Infant swim lesson"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image
+                src="/images/lesson-1.jpg"
+                alt="Swim lesson in progress"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image
+                src="/images/pool.jpg"
+                alt="Indoor heated pool"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image
+                src="/images/lesson-2.jpg"
+                alt="Child learning to swim"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="relative aspect-square rounded-xl overflow-hidden">
+              <Image
+                src="/images/lesson-4.jpg"
+                alt="Swimming instruction"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-[var(--gray-light)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">Why Choose Aqua Journey?</h2>
@@ -162,17 +224,17 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[var(--primary)]">
+      <section className="py-20 bg-[var(--secondary)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Join the Aqua Journey Family
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
             Ready to give your child the gift of swimming? We'd love to meet you.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-[var(--primary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            className="inline-block bg-white text-[var(--secondary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
           >
             Get in Touch
           </Link>

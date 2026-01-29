@@ -25,7 +25,7 @@ const faqs = [
     questions: [
       {
         q: 'How long are the lessons?',
-        a: 'Most of our lessons are 30 minutes long. This duration is optimal for maintaining children\'s attention and energy while providing enough time for meaningful instruction.',
+        a: 'We offer 10, 15, and 30 minute lessons depending on age and skill level. Shorter lessons are more effective for young children—our one-on-one instruction is intensive, and keeping sessions brief helps maintain focus, prevents fatigue, and leads to faster skill development. Quality over quantity is key to our proven results.',
       },
       {
         q: 'How many children are in each class?',

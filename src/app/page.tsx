@@ -60,9 +60,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Indoor Heated Pool</h3>
+              <h3 className="text-xl font-semibold mb-3">Indoor Heated Pools</h3>
               <p className="text-[var(--gray)]">
-                Our pool stays at a comfortable 90°F year-round. No cancelled lessons due to weather.
+                Our pools stay at a comfortable 90°F year-round. No cancelled lessons due to weather.
               </p>
             </div>
 

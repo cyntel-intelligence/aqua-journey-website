@@ -150,7 +150,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-lg mb-2">Year-Round Indoor Pool</h3>
-                <p className="text-[var(--gray)]">Our indoor heated pool stays at a comfortable 90°F all year—rain or shine. No cancelled lessons due to weather!</p>
+                <p className="text-[var(--gray)]">Our indoor heated pools stay at a comfortable 90°F all year—rain or shine. No cancelled lessons due to weather!</p>
               </div>
             </div>
           </div>

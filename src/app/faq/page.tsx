@@ -58,7 +58,7 @@ const faqs = [
       },
       {
         q: 'Do parents need to get in the water?',
-        a: 'No, all of our lessons are one-on-one with a certified instructor. Parents can watch from the viewing area while their child learns.',
+        a: 'No, all of our lessons are one-on-one with a certified instructor. Parents can watch from the side of the pool or sit in our lifeguard chairs!',
       },
       {
         q: 'What if my child is afraid of the water?',

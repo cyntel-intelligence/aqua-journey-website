@@ -178,15 +178,17 @@ export default function ClassesPage() {
             Ready to Enroll?
           </h2>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Contact us to find the perfect class for your child or to schedule a trial lesson.
+            Register online today or contact us to learn more about our programs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <a
+              href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white text-[var(--secondary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
-              Contact Us to Enroll
-            </Link>
+              Register Now
+            </a>
             <Link
               href="https://aquajourneyswimschool.com/gift-cards"
               target="_blank"

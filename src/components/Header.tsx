@@ -43,6 +43,14 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
+            <a
+              href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors"
+            >
+              Register Now
+            </a>
             <Link
               href="https://aquajourneyswimschool.com/gift-cards"
               target="_blank"
@@ -86,6 +94,15 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Register Now
+              </a>
               <Link
                 href="https://aquajourneyswimschool.com/gift-cards"
                 target="_blank"

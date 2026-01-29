@@ -15,17 +15,19 @@ export default function Home() {
               Professional swim lessons in a safe, nurturing environment. Building water safety skills that last a lifetime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/classes"
+              <a
+                href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-[var(--primary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
               >
-                View Our Classes
-              </Link>
+                Register Now
+              </a>
               <Link
-                href="/contact"
+                href="/classes"
                 className="border-2 border-white text-white hover:bg-white hover:text-[var(--primary)] px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
               >
-                Contact Us
+                View Our Classes
               </Link>
             </div>
           </div>

@@ -42,19 +42,19 @@ const faqs = [
       },
       {
         q: 'What should my child wear to lessons?',
-        a: 'Children should wear a comfortable swimsuit. For infants and toddlers not yet potty trained, a swim diaper is required (we recommend a reusable swim diaper with a snug fit). Goggles are optional but can be helpful.',
+        a: 'All children who are not potty-trained MUST wear a snugly fitting reusable, cloth swim diaper (available for purchase at our facility). Disposable swim diapers are not allowed. Potty-trained children can wear swimsuits, trunks, or rash guards. If your child has long hair, please braid or tie it back. Goggles are optional.',
       },
       {
         q: 'Do parents need to get in the water?',
         a: 'No, all of our lessons are one-on-one with a certified instructor. Parents can watch from the side of the pool or sit in our lifeguard chairs!',
       },
       {
-        q: 'What if my child is afraid of the water?',
-        a: 'Many children start with some water anxiety, and that\'s completely normal. Our instructors are trained to work gently with hesitant swimmers, building trust and confidence at each child\'s own pace. We never force children into situations that make them uncomfortable.',
+        q: 'What if my child cries during lessons?',
+        a: 'Most children cry at some point during lessons—this is completely normal. They are NOT crying because they are hurt or in pain. They may be adjusting to a new environment or being challenged physically in new ways. Even children who cry throughout lessons learn to love swimming as they gain confidence. In our experience, crying does not mean your child will develop a fear of water.',
       },
       {
         q: 'How long until my child learns to swim?',
-        a: 'Every child progresses at their own pace, and many factors influence learning speed including age, comfort level, and lesson frequency. Most children show significant improvement within their first session of lessons, but mastering swimming is a gradual process that builds over time.',
+        a: 'Although most children learn survival swimming skills after 4-6 weeks of lessons, every child progresses at their own pace. Factors like illness, absences, teething, diet, and previous water experience can affect your child\'s rate of progress. Each skill is taught and mastered before the next is introduced.',
       },
     ],
   },
@@ -66,12 +66,12 @@ const faqs = [
         a: 'Safety is our top priority. All instructors are certified and trained in water safety and CPR. We maintain strict supervision ratios, regularly check water quality, and follow comprehensive safety procedures.',
       },
       {
-        q: 'What is your cancellation policy?',
-        a: 'We require 24 hours notice for cancellations to receive credit for a makeup lesson. Please contact us as soon as possible if you need to miss a class.',
+        q: 'What is your attendance and cancellation policy?',
+        a: 'We reserve a specific time slot for your child—you are paying for your time slot, not individual lessons. We do not offer credits or make-ups for missed lessons. To change or stop lessons, please submit a withdrawal notice 7 days before your final lesson. If you have prepaid for multiple weeks and provide proper notice, we will credit any tuition beyond the 7-day notice period to your account, valid for one year.',
       },
       {
         q: 'What happens if my child is sick?',
-        a: 'Please keep your child home if they are ill, have a fever, or have had diarrhea in the past 24 hours. This protects your child and others in the pool. We\'ll gladly reschedule missed lessons due to illness.',
+        a: 'We hope your little one feels better! Please keep your child home if they are ill. Per our attendance policy, we do not offer credits or make-ups for missed lessons.',
       },
     ],
   },

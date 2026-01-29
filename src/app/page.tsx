@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Script from 'next/script';
 
 export default function Home() {
   return (
@@ -206,6 +207,23 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Instagram Feed */}
+      <section className="py-20 bg-[var(--gray-light)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+              Follow Us on Instagram
+            </h2>
+            <p className="text-lg text-[var(--gray)]">
+              See what's happening at Aqua Journey!
+            </p>
+          </div>
+          {/* @ts-expect-error Custom element from Behold */}
+          <behold-widget feed-id="jmuKnJAnY3sW9kjQkNa8"></behold-widget>
+          <Script src="https://w.behold.so/widget.js" strategy="lazyOnload" />
         </div>
       </section>
 

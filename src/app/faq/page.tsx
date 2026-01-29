@@ -29,7 +29,7 @@ const faqs = [
       },
       {
         q: 'What days and times are classes offered?',
-        a: 'We offer classes Monday through Thursday from 9am to 7pm, and Friday from 9am to 4pm. We are closed on weekends. Contact us for current availability.',
+        a: 'We offer classes Monday through Thursday with various time slots throughout the day. Contact us for our current schedule and availability.',
       },
       {
         q: 'How often should my child attend lessons?',

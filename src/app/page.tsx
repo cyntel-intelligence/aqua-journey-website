@@ -57,12 +57,12 @@ export default function Home() {
             <div className="text-center p-8 rounded-xl bg-[var(--gray-light)] hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Safety First</h3>
+              <h3 className="text-xl font-semibold mb-3">Indoor Heated Pool</h3>
               <p className="text-[var(--gray)]">
-                Our certified instructors prioritize water safety skills alongside swimming technique.
+                Our pool stays at a comfortable 90°F year-round. No cancelled lessons due to weather.
               </p>
             </div>
 
@@ -70,12 +70,12 @@ export default function Home() {
             <div className="text-center p-8 rounded-xl bg-[var(--gray-light)] hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Small Class Sizes</h3>
+              <h3 className="text-xl font-semibold mb-3">Certified Instructors</h3>
               <p className="text-[var(--gray)]">
-                Personalized attention ensures every child gets the support they need to progress.
+                Each instructor has 100+ hours of in-water training plus CPR/First Aid certification.
               </p>
             </div>
 
@@ -83,12 +83,12 @@ export default function Home() {
             <div className="text-center p-8 rounded-xl bg-[var(--gray-light)] hover:shadow-lg transition-shadow">
               <div className="w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Fun & Engaging</h3>
+              <h3 className="text-xl font-semibold mb-3">One-on-One Attention</h3>
               <p className="text-[var(--gray)]">
-                We make learning to swim enjoyable, building confidence and a love for the water.
+                Private and semi-private lessons ensure personalized instruction at your child's pace.
               </p>
             </div>
           </div>
@@ -108,43 +108,43 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Infant */}
+            {/* Infant Survival */}
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">👶</div>
-              <h3 className="text-lg font-semibold mb-2">Infant</h3>
-              <p className="text-sm text-[var(--gray)] mb-4">Ages 6-18 months</p>
+              <h3 className="text-lg font-semibold mb-2">Infant Survival</h3>
+              <p className="text-sm text-[var(--gray)] mb-4">6 months+</p>
               <p className="text-[var(--gray)] text-sm">
-                Parent-child classes introducing water comfort and basic safety skills.
+                Life-saving back float skills for our youngest swimmers.
               </p>
             </div>
 
-            {/* Toddler */}
+            {/* Toddler & Young Children */}
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="text-4xl mb-4">🧒</div>
               <h3 className="text-lg font-semibold mb-2">Toddler</h3>
-              <p className="text-sm text-[var(--gray)] mb-4">Ages 18 months - 3 years</p>
+              <p className="text-sm text-[var(--gray)] mb-4">Walking - 4 years</p>
               <p className="text-[var(--gray)] text-sm">
-                Building water confidence with foundational swimming movements.
-              </p>
-            </div>
-
-            {/* Preschool */}
-            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-4xl mb-4">🏊</div>
-              <h3 className="text-lg font-semibold mb-2">Preschool</h3>
-              <p className="text-sm text-[var(--gray)] mb-4">Ages 3-5 years</p>
-              <p className="text-[var(--gray)] text-sm">
-                Developing stroke technique and independent swimming skills.
+                Swim-float-swim sequence to reach safety independently.
               </p>
             </div>
 
             {/* School-Age */}
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-4xl mb-4">🏅</div>
+              <div className="text-4xl mb-4">🏊</div>
               <h3 className="text-lg font-semibold mb-2">School-Age</h3>
-              <p className="text-sm text-[var(--gray)] mb-4">Ages 5+ years</p>
+              <p className="text-sm text-[var(--gray)] mb-4">5+ years</p>
               <p className="text-[var(--gray)] text-sm">
-                Refining strokes and building endurance for confident swimmers.
+                Survival skills plus stroke development for confident swimming.
+              </p>
+            </div>
+
+            {/* Stroke Development */}
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">🏅</div>
+              <h3 className="text-lg font-semibold mb-2">Stroke Development</h3>
+              <p className="text-sm text-[var(--gray)] mb-4">All ages</p>
+              <p className="text-[var(--gray)] text-sm">
+                Refine technique, increase speed, and build endurance.
               </p>
             </div>
           </div>
@@ -173,10 +173,10 @@ export default function Home() {
               </svg>
             </div>
             <blockquote className="text-2xl md:text-3xl text-[var(--foreground)] mb-6 leading-relaxed">
-              "Our daughter was terrified of the water. After just a few months at Aqua Journey, she's swimming laps and asking to go to the pool every day!"
+              "Last year I spent many weeks at a public pool and private lessons and saw zero progress. Both my girls started at Aqua Journeys still terrified of putting their head in the water — now they're confident swimmers!"
             </blockquote>
             <cite className="text-[var(--gray)] not-italic">
-              — Sarah M., Parent
+              — Grateful Parent
             </cite>
             <div className="mt-8">
               <Link

@@ -33,11 +33,11 @@ const faqs = [
       },
       {
         q: 'How many children are in each class?',
-        a: 'We maintain small class sizes with a maximum of 4 students per instructor. This ensures every child receives personalized attention and ample practice time.',
+        a: 'We offer one-on-one private instruction. This ensures your child receives fully personalized attention and maximizes their progress in every lesson.',
       },
       {
         q: 'What days and times are classes offered?',
-        a: 'We offer classes Monday through Saturday with various time slots throughout the day. Contact us for our current schedule and availability.',
+        a: 'We offer classes Monday through Thursday from 9am to 7pm, and Friday from 9am to 4pm. We are closed on weekends. Contact us for current availability.',
       },
       {
         q: 'How often should my child attend lessons?',
@@ -48,6 +48,10 @@ const faqs = [
   {
     category: 'What to Expect',
     questions: [
+      {
+        q: 'What is the pool temperature?',
+        a: 'Our indoor heated pools are maintained at a comfortable 90°F year-round. This warm temperature helps children feel comfortable and relaxed during lessons.',
+      },
       {
         q: 'What should my child wear to lessons?',
         a: 'Children should wear a comfortable swimsuit. For infants and toddlers not yet potty trained, a swim diaper is required (we recommend a reusable swim diaper with a snug fit). Goggles are optional but can be helpful.',
@@ -88,7 +92,7 @@ const faqs = [
     questions: [
       {
         q: 'How do I register for classes?',
-        a: 'You can register by contacting us via phone, email, or our contact form. We\'ll discuss class options, check availability, and get you set up.',
+        a: 'You can register online through our registration portal by clicking the "Register Now" button on our website. You can also contact us via phone at (386) 676-9555 or email to discuss class options.',
       },
       {
         q: 'Do you offer gift cards?',

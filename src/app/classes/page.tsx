@@ -1,6 +1,38 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
+const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) => {
+  const sizeClasses = size === 'lg' ? 'w-20 h-20' : 'w-12 h-12';
+  const containerClasses = size === 'lg'
+    ? 'w-32 h-32 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto'
+    : 'w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center';
+
+  const icons: Record<string, JSX.Element> = {
+    infant: (
+      <svg className={`${sizeClasses} text-white`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
+    toddler: (
+      <svg className={`${sizeClasses} text-white`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+      </svg>
+    ),
+    swimming: (
+      <svg className={`${sizeClasses} text-white`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    trophy: (
+      <svg className={`${sizeClasses} text-white`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+    ),
+  };
+
+  return <div className={containerClasses}>{icons[icon]}</div>;
+};
+
 export const metadata: Metadata = {
   title: 'Our Classes | Aqua Journey Swim School',
   description: 'Explore our swim class programs for infants, toddlers, preschoolers, and school-age children. Find the right level for your child.',
@@ -11,7 +43,7 @@ const classes = [
     id: 'infant',
     name: 'Infant Survival Swimming',
     ages: '6 months+',
-    emoji: '👶',
+    icon: 'infant',
     description: 'Our youngest swimmers learn the crucial, life-saving skill of rolling to an independent back float to rest and breathe.',
     features: [
       'Learn to roll over to back float position',
@@ -26,7 +58,7 @@ const classes = [
     id: 'toddler',
     name: 'Toddler & Young Children',
     ages: 'Walking - 4 years',
-    emoji: '🧒',
+    icon: 'toddler',
     description: 'As children develop physical skills and begin walking, they learn the swim-float-swim sequence to reach safety.',
     features: [
       'Swim a short distance independently',
@@ -41,7 +73,7 @@ const classes = [
     id: 'school-age',
     name: 'School-Age Swimming',
     ages: '5+ years',
-    emoji: '🏊',
+    icon: 'swimming',
     description: 'Older children and beginners learn survival skills plus stroke development for confident, capable swimming.',
     features: [
       'Survival swimming fundamentals',
@@ -56,7 +88,7 @@ const classes = [
     id: 'stroke',
     name: 'Stroke Development',
     ages: 'All ages',
-    emoji: '🏅',
+    icon: 'trophy',
     description: 'For swimmers ready to refine their technique, increase speed, and build endurance in the water.',
     features: [
       'Refine freestyle, backstroke, breaststroke, butterfly',
@@ -94,8 +126,8 @@ export default function ClassesPage() {
               >
                 <div className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                   <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-5xl">{classItem.emoji}</span>
+                    <div className="flex items-center gap-4 mb-4">
+                      <ClassIcon icon={classItem.icon} size="md" />
                       <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-[var(--foreground)]">{classItem.name}</h2>
                         <p className="text-[var(--primary)] font-medium">{classItem.ages}</p>
@@ -115,7 +147,7 @@ export default function ClassesPage() {
                   </div>
                   <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
                     <div className={`${classItem.color} border-2 rounded-2xl p-8 md:p-12 text-center`}>
-                      <div className="text-8xl mb-4">{classItem.emoji}</div>
+                      <div className="mb-4"><ClassIcon icon={classItem.icon} size="lg" /></div>
                       <h3 className="text-xl font-semibold text-[var(--foreground)]">{classItem.name}</h3>
                       <p className="text-[var(--gray)]">{classItem.ages}</p>
                     </div>

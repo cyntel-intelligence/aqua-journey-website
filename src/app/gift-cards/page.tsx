@@ -54,7 +54,7 @@ export default function GiftCardsPage() {
                 </svg>
               </div>
               <h3 className="font-semibold text-lg mb-2">Easy Delivery</h3>
-              <p className="text-[var(--gray)] text-sm">Delivered instantly via email.</p>
+              <p className="text-[var(--gray)] text-sm">Receive via email, mail, or pick up in person.</p>
             </div>
 
             <div className="text-center p-6">
@@ -101,8 +101,8 @@ export default function GiftCardsPage() {
               <div className="w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                 2
               </div>
-              <h3 className="font-semibold text-lg mb-2">Receive by Email</h3>
-              <p className="text-[var(--gray)]">Your gift card will be delivered instantly to your email.</p>
+              <h3 className="font-semibold text-lg mb-2">Receive Your Gift Card</h3>
+              <p className="text-[var(--gray)]">Get it via email, mail, or pick up at our facility.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 text-center">

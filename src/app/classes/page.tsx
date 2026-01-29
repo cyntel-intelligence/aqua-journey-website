@@ -141,11 +141,11 @@ export default function ClassesPage() {
             <div className="bg-white rounded-xl p-6 text-center">
               <div className="w-14 h-14 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Class Duration</h3>
-              <p className="text-[var(--gray)]">30-minute sessions designed to maintain focus and maximize learning.</p>
+              <h3 className="font-semibold text-lg mb-2">Results in Weeks</h3>
+              <p className="text-[var(--gray)]">Our proven method delivers real progress fast—most children see results within weeks.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 text-center">

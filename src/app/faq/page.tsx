@@ -79,7 +79,7 @@ const faqs = [
     category: 'Payment & Registration',
     questions: [
       {
-        q: 'How do I register for classes?',
+        q: 'How do I register for lessons?',
         a: 'You can register online through our registration portal by clicking the "Register Now" button on our website. You can also contact us via phone at (386) 676-9555 or email to discuss class options.',
       },
       {

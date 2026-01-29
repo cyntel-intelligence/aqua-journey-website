@@ -14,6 +14,29 @@ export const metadata: Metadata = {
   title: "Aqua Journey Swim School | Learn to Swim with Confidence",
   description: "Professional swim lessons for children of all ages. Our certified instructors provide a safe, nurturing environment where kids learn water safety and swimming skills.",
   keywords: "swim school, swimming lessons, kids swimming, water safety, learn to swim",
+  metadataBase: new URL("https://aquajourneyswimschool.com"),
+  openGraph: {
+    title: "Aqua Journey Swim School",
+    description: "Teaching Life-Saving Skills, One Swimmer at a Time. Professional one-on-one swim lessons in Ormond Beach, FL.",
+    url: "https://aquajourneyswimschool.com",
+    siteName: "Aqua Journey Swim School",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Aqua Journey Swim School",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aqua Journey Swim School",
+    description: "Teaching Life-Saving Skills, One Swimmer at a Time. Professional one-on-one swim lessons in Ormond Beach, FL.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({

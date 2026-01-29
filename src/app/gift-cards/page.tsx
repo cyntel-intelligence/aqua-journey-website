@@ -109,8 +109,8 @@ export default function GiftCardsPage() {
               <div className="w-10 h-10 bg-[var(--primary)] text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">
                 3
               </div>
-              <h3 className="font-semibold text-lg mb-2">Redeem for Lessons</h3>
-              <p className="text-[var(--gray)]">The recipient can apply the gift card toward swim lessons.</p>
+              <h3 className="font-semibold text-lg mb-2">Redeem Anytime</h3>
+              <p className="text-[var(--gray)]">Apply toward swim lessons, swimwear, or retail purchases.</p>
             </div>
           </div>
         </div>

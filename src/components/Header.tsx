@@ -52,9 +52,7 @@ export default function Header() {
               Register Now
             </a>
             <Link
-              href="https://aquajourneyswimschool.com/gift-cards"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/gift-cards"
               className="bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors"
             >
               Gift Cards
@@ -104,9 +102,7 @@ export default function Header() {
                 Register Now
               </a>
               <Link
-                href="https://aquajourneyswimschool.com/gift-cards"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/gift-cards"
                 className="bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >

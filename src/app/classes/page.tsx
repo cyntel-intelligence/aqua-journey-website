@@ -223,9 +223,7 @@ export default function ClassesPage() {
               Register Now
             </a>
             <Link
-              href="https://aquajourneyswimschool.com/gift-cards"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/gift-cards"
               className="border-2 border-white text-white hover:bg-white hover:text-[var(--secondary)] px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Give the Gift of Swimming

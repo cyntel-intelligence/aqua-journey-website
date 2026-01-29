@@ -139,7 +139,8 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-[var(--gray-light)] rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-[var(--foreground)] mb-6">Send Us a Message</h2>
-              <form className="space-y-6">
+              <form action="https://formspree.io/f/xrekqlpz" method="POST" className="space-y-6">
+                <input type="hidden" name="_subject" value="New Contact Form Submission - Aqua Journey Website" />
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-[var(--foreground)] mb-2">

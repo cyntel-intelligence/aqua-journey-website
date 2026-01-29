@@ -70,7 +70,7 @@ export default function GiftCardsPage() {
 
           <div className="text-center">
             <a
-              href="https://aquajourneyswimschool.com/gift-cards"
+              href="https://aquajourneyswimschool.com/product/aqua-journeys-swim-school-gift-certificates-2/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors"

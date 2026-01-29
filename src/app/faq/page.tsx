@@ -31,10 +31,6 @@ const faqs = [
         q: 'What days and times are classes offered?',
         a: 'We offer classes Monday through Thursday with various time slots throughout the day. Contact us for our current schedule and availability.',
       },
-      {
-        q: 'How often should my child attend lessons?',
-        a: 'We recommend at least one lesson per week for consistent progress. Many families choose twice-weekly lessons for faster skill development, especially for beginners.',
-      },
     ],
   },
   {

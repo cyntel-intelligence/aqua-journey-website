@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import React from 'react';
 
 const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) => {
   const sizeClasses = size === 'lg' ? 'w-20 h-20' : 'w-12 h-12';
@@ -7,7 +8,7 @@ const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) 
     ? 'w-32 h-32 bg-[var(--primary)] rounded-full flex items-center justify-center mx-auto'
     : 'w-16 h-16 bg-[var(--primary)] rounded-full flex items-center justify-center';
 
-  const icons: Record<string, JSX.Element> = {
+  const icons: Record<string, React.ReactNode> = {
     infant: (
       <svg className={`${sizeClasses} text-white`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />

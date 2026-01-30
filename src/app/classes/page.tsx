@@ -7,6 +7,14 @@ const classImages: Record<string, string> = {
   infant: '/images/icon-infant.png',
   toddler: '/images/icon-toddler.png',
   swimming: '/images/icon-swimmer.png',
+  trophy: '/images/icon-swimmer.png',
+};
+
+const classPhotos: Record<string, string> = {
+  infant: '/images/infant-lesson.jpg',
+  toddler: '/images/lesson-1.jpg',
+  swimming: '/images/lesson-2.jpg',
+  trophy: '/images/lesson-4.jpg',
 };
 
 const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) => {
@@ -41,32 +49,40 @@ const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) 
   return <div className={containerClasses}>{icons[icon]}</div>;
 };
 
-const ClassImageBox = ({ icon, name, ages, color }: { icon: string; name: string; ages: string; color: string }) => {
+const ClassTitleIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) => {
   const imageSrc = classImages[icon];
+  const sizeClasses = size === 'lg' ? 'w-16 h-16' : 'w-12 h-12';
 
   if (imageSrc) {
     return (
-      <div className={`${color} border-2 rounded-2xl p-8 md:p-12 text-center`}>
-        <div className="mb-4 flex justify-center">
-          <Image
-            src={imageSrc}
-            alt={name}
-            width={120}
-            height={95}
-            className="object-contain"
-          />
-        </div>
-        <h3 className="text-xl font-semibold text-[var(--foreground)]">{name}</h3>
-        <p className="text-[var(--gray)]">{ages}</p>
+      <div className={`${sizeClasses} flex items-center justify-center`}>
+        <Image
+          src={imageSrc}
+          alt=""
+          width={size === 'lg' ? 64 : 48}
+          height={size === 'lg' ? 64 : 48}
+          className="object-contain"
+        />
       </div>
     );
   }
 
+  return <ClassIcon icon={icon} size={size} />;
+};
+
+const ClassPhotoBox = ({ icon, color }: { icon: string; color: string }) => {
+  const photoSrc = classPhotos[icon];
+
   return (
-    <div className={`${color} border-2 rounded-2xl p-8 md:p-12 text-center`}>
-      <div className="mb-4"><ClassIcon icon={icon} size="lg" /></div>
-      <h3 className="text-xl font-semibold text-[var(--foreground)]">{name}</h3>
-      <p className="text-[var(--gray)]">{ages}</p>
+    <div className={`${color} border-2 rounded-2xl overflow-hidden`}>
+      <div className="relative aspect-[4/3]">
+        <Image
+          src={photoSrc}
+          alt="Swimming lesson"
+          fill
+          className="object-cover"
+        />
+      </div>
     </div>
   );
 };
@@ -165,7 +181,7 @@ export default function ClassesPage() {
                 <div className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                   <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
                     <div className="flex items-center gap-4 mb-4">
-                      <ClassIcon icon={classItem.icon} size="md" />
+                      <ClassTitleIcon icon={classItem.icon} size="md" />
                       <div>
                         <h2 className="text-2xl md:text-3xl font-bold text-[var(--foreground)]">{classItem.name}</h2>
                         <p className="text-[var(--primary)] font-medium">{classItem.ages}</p>
@@ -184,7 +200,7 @@ export default function ClassesPage() {
                     </ul>
                   </div>
                   <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                    <ClassImageBox icon={classItem.icon} name={classItem.name} ages={classItem.ages} color={classItem.color} />
+                    <ClassPhotoBox icon={classItem.icon} color={classItem.color} />
                   </div>
                 </div>
                 {index < classes.length - 1 && (

@@ -118,8 +118,8 @@ export default function TestimonialsPage() {
               <p className="text-[var(--gray)]">Parent Satisfaction</p>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-[var(--primary)] mb-2">5+</div>
-              <p className="text-[var(--gray)]">Years Experience</p>
+              <div className="text-4xl md:text-5xl font-bold text-[var(--primary)] mb-2">35+</div>
+              <p className="text-[var(--gray)]">Years Combined Experience</p>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold text-[var(--primary)] mb-2">4.9</div>

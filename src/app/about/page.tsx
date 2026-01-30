@@ -27,7 +27,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-[var(--foreground)] mb-6">Our Story</h2>
               <p className="text-[var(--gray)] mb-4 leading-relaxed">
-                For over 15 years, Aqua Journeys Swim School has been helping children in Ormond Beach and the surrounding areas discover the joy of swimming. As a family-owned business, we understand that swimming is an essential life skill that everyone should have the opportunity to learn.
+                With over 35 years of combined experience, Aqua Journeys Swim School has been helping children in Ormond Beach and the surrounding areas discover the joy of swimming. As a family-owned business, we understand that swimming is an essential life skill that everyone should have the opportunity to learn.
               </p>
               <p className="text-[var(--gray)] mb-4 leading-relaxed">
                 What started as a passion for water safety has grown into one of the most trusted swim schools in the Daytona Beach area. We've helped thousands of children—from infants as young as 6 months to school-age swimmers—develop confidence and skills in the water.

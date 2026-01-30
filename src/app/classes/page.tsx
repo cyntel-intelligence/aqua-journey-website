@@ -12,9 +12,9 @@ const classImages: Record<string, string> = {
 
 const classPhotos: Record<string, string> = {
   infant: '/images/infant-lesson.jpg',
-  toddler: '/images/stroke-development.jpg',
+  toddler: '/images/stroke-new.jpg',
   swimming: '/images/toddler-swim.jpg',
-  trophy: '/images/stroke-new.jpg',
+  trophy: '/images/stroke-development.jpg',
 };
 
 const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) => {

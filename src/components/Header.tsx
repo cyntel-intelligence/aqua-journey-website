@@ -19,9 +19,9 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+        <div className="flex justify-between items-center h-20 relative">
+          {/* Logo - centered on mobile */}
+          <Link href="/" className="flex items-center md:relative absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0">
             <Image
               src="/logo.png"
               alt="Aqua Journey Swim School"

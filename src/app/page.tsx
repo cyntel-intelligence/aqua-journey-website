@@ -119,7 +119,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-2">Infant Survival</h3>
               <p className="text-sm text-[var(--gray)] mb-4">6 months+</p>
               <p className="text-[var(--gray)] text-sm">
-                Life-saving back float skills for our youngest swimmers.
+                Learn to roll back to float—a life-saving skill for our youngest swimmers.
               </p>
             </div>
 

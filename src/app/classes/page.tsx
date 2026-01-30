@@ -7,7 +7,7 @@ const classImages: Record<string, string> = {
   infant: '/images/icon-infant.png',
   toddler: '/images/icon-toddler.png',
   swimming: '/images/icon-swimmer.png',
-  trophy: '/images/icon-swimmer.png',
+  trophy: '/images/icon-toddler.png',
 };
 
 const classPhotos: Record<string, string> = {

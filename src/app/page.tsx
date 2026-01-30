@@ -168,7 +168,7 @@ export default function Home() {
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 flex items-center justify-center mb-4">
                 <Image
-                  src="/images/icon-swimmer.png"
+                  src="/images/icon-toddler.png"
                   alt="Stroke Development"
                   width={56}
                   height={45}

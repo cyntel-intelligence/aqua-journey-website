@@ -1,6 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+
+const classImages: Record<string, string> = {
+  infant: '/images/icon-infant.png',
+  toddler: '/images/icon-toddler.png',
+  swimming: '/images/icon-swimmer.png',
+};
 
 const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) => {
   const sizeClasses = size === 'lg' ? 'w-20 h-20' : 'w-12 h-12';
@@ -32,6 +39,36 @@ const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) 
   };
 
   return <div className={containerClasses}>{icons[icon]}</div>;
+};
+
+const ClassImageBox = ({ icon, name, ages, color }: { icon: string; name: string; ages: string; color: string }) => {
+  const imageSrc = classImages[icon];
+
+  if (imageSrc) {
+    return (
+      <div className={`${color} border-2 rounded-2xl p-8 md:p-12 text-center`}>
+        <div className="mb-4 flex justify-center">
+          <Image
+            src={imageSrc}
+            alt={name}
+            width={120}
+            height={95}
+            className="object-contain"
+          />
+        </div>
+        <h3 className="text-xl font-semibold text-[var(--foreground)]">{name}</h3>
+        <p className="text-[var(--gray)]">{ages}</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`${color} border-2 rounded-2xl p-8 md:p-12 text-center`}>
+      <div className="mb-4"><ClassIcon icon={icon} size="lg" /></div>
+      <h3 className="text-xl font-semibold text-[var(--foreground)]">{name}</h3>
+      <p className="text-[var(--gray)]">{ages}</p>
+    </div>
+  );
 };
 
 export const metadata: Metadata = {
@@ -147,11 +184,7 @@ export default function ClassesPage() {
                     </ul>
                   </div>
                   <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                    <div className={`${classItem.color} border-2 rounded-2xl p-8 md:p-12 text-center`}>
-                      <div className="mb-4"><ClassIcon icon={classItem.icon} size="lg" /></div>
-                      <h3 className="text-xl font-semibold text-[var(--foreground)]">{classItem.name}</h3>
-                      <p className="text-[var(--gray)]">{classItem.ages}</p>
-                    </div>
+                    <ClassImageBox icon={classItem.icon} name={classItem.name} ages={classItem.ages} color={classItem.color} />
                   </div>
                 </div>
                 {index < classes.length - 1 && (

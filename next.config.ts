@@ -210,6 +210,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/colibri-19567',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/colibri-:id(\\d+)',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/groups',
         destination: '/classes',
         permanent: true,

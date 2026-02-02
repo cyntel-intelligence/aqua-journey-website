@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Script from 'next/script';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -94,9 +95,30 @@ const faqs = [
   },
 ];
 
+// Generate FAQ schema for JSON-LD
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.flatMap(category =>
+    category.questions.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  )
+};
+
 export default function FAQPage() {
   return (
     <>
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

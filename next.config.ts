@@ -137,6 +137,52 @@ const nextConfig: NextConfig = {
         destination: '/sitemap.xml',
         permanent: true,
       },
+      // WooCommerce/eCommerce URLs
+      {
+        source: '/checkout',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/checkout/:path*',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/cart',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/cart/:path*',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/shop',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/shop/:path*',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/product/:path*',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/my-account',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/my-account/:path*',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };

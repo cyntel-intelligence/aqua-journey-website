@@ -183,6 +183,69 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // Old WordPress page URLs
+      {
+        source: '/adults-ages-18',
+        destination: '/classes',
+        permanent: true,
+      },
+      {
+        source: '/blog-home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/choosing-a-class',
+        destination: '/classes',
+        permanent: true,
+      },
+      {
+        source: '/colibri-19459',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/colibri-19481',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/groups',
+        destination: '/classes',
+        permanent: true,
+      },
+      {
+        source: '/holiday-specials-2',
+        destination: '/gift-cards',
+        permanent: true,
+      },
+      {
+        source: '/home-1-yogalicious',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/swim-float-swim',
+        destination: '/classes',
+        permanent: true,
+      },
+      {
+        source: '/test',
+        destination: '/',
+        permanent: true,
+      },
+      // MailPoet plugin URLs (query params)
+      {
+        source: '/',
+        has: [
+          {
+            type: 'query',
+            key: 'mailpoet_page',
+          },
+        ],
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };

@@ -13,8 +13,16 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Aqua Journey Swim School | Learn to Swim with Confidence",
   description: "Professional swim lessons for children of all ages. Our certified instructors provide a safe, nurturing environment where kids learn water safety and swimming skills.",
-  keywords: "swim school, swimming lessons, kids swimming, water safety, learn to swim",
+  keywords: "swim school, swimming lessons, kids swimming, water safety, learn to swim, Ormond Beach, Daytona Beach, Florida",
   metadataBase: new URL("https://aquajourneyswimschool.com"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: "Aqua Journey Swim School",
     description: "Teaching Life-Saving Skills, One Swimmer at a Time. Professional one-on-one swim lessons in Ormond Beach, FL.",

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Scholarships | Aqua Journey Swim School',
-  description: 'Learn about scholarship opportunities for swim lessons at Aqua Journey Swim School through our partners: Step Up for Students, Down Syndrome Foundation, and Make A Splash Foundation.',
+  title: 'Scholarships | Aqua Journey Swim School | Ormond Beach, FL',
+  description: 'Scholarship opportunities for swim lessons in Ormond Beach at Aqua Journey Swim School. Partners include Step Up for Students, Down Syndrome Foundation, and Make A Splash Foundation.',
 };
 
 const partners = [

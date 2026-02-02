@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Testimonials | Aqua Journey Swim School',
-  description: 'Read what parents are saying about Aqua Journey Swim School and how our swim lessons have helped their children.',
+  title: 'Testimonials | Aqua Journey Swim School | Ormond Beach, FL',
+  description: 'Read what Ormond Beach and Daytona Beach area parents are saying about Aqua Journey Swim School and how our swim lessons have helped their children.',
 };
 
 const testimonials = [

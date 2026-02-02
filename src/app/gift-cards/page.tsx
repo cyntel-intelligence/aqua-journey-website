@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Gift Cards | Aqua Journey Swim School',
-  description: 'Give the gift of swimming! Purchase Aqua Journey Swim School gift cards for birthdays, holidays, or any special occasion.',
+  title: 'Gift Cards | Aqua Journey Swim School | Ormond Beach, FL',
+  description: 'Give the gift of swimming! Purchase Aqua Journey Swim School gift cards for swim lessons in Ormond Beach and the Daytona Beach area.',
 };
 
 export default function GiftCardsPage() {

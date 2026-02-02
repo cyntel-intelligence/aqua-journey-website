@@ -70,15 +70,23 @@ const ClassTitleIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg
   return <ClassIcon icon={icon} size={size} />;
 };
 
+const classAltText: Record<string, string> = {
+  infant: 'Infant swimming lesson at Aqua Journey Swim School',
+  toddler: 'Toddler learning to swim at Aqua Journey',
+  swimming: 'School-age child in swim lesson',
+  trophy: 'Student practicing stroke development',
+};
+
 const ClassPhotoBox = ({ icon, color }: { icon: string; color: string }) => {
   const photoSrc = classPhotos[icon];
+  const altText = classAltText[icon] || 'Swimming lesson at Aqua Journey Swim School';
 
   return (
     <div className={`${color} border-2 rounded-2xl overflow-hidden`}>
       <div className="relative aspect-[4/3]">
         <Image
           src={photoSrc}
-          alt="Swimming lesson"
+          alt={altText}
           fill
           className="object-cover"
         />
@@ -88,8 +96,8 @@ const ClassPhotoBox = ({ icon, color }: { icon: string; color: string }) => {
 };
 
 export const metadata: Metadata = {
-  title: 'Our Classes | Aqua Journey Swim School',
-  description: 'Explore our swim class programs for infants, toddlers, preschoolers, and school-age children. Find the right level for your child.',
+  title: 'Swim Classes | Aqua Journey Swim School | Ormond Beach, FL',
+  description: 'Swim lessons in Ormond Beach for infants, toddlers, and school-age children. Find the right swim class for your child in the Daytona Beach area.',
 };
 
 const classes = [

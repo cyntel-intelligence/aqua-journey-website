@@ -3,8 +3,8 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Us | Aqua Journey Swim School',
-  description: 'Learn about Aqua Journey Swim School, our mission, our experienced instructors, and our commitment to teaching children water safety.',
+  title: 'About Us | Aqua Journey Swim School | Ormond Beach, FL',
+  description: 'Learn about Aqua Journey Swim School in Ormond Beach, FL. Our experienced instructors teach children water safety and swimming skills in the Daytona Beach area.',
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Aqua Journey</h1>
           <p className="text-xl text-blue-100 max-w-2xl">
-            Dedicated to teaching children the life-saving skill of swimming in a safe, nurturing environment.
+            Dedicated to teaching children in Ormond Beach and the Daytona Beach area the life-saving skill of swimming in a safe, nurturing environment.
           </p>
         </div>
       </section>

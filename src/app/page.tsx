@@ -14,7 +14,7 @@ export default function Home() {
               Teaching Life-Saving Skills, One Swimmer at a Time
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Professional one-on-one swim lessons in our warm, indoor pools. Building water safety skills that last a lifetime.
+              Professional one-on-one swim lessons in Ormond Beach, FL. Building water safety skills that last a lifetime in our warm, indoor pools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -50,7 +50,7 @@ export default function Home() {
               Why Families Choose Aqua Journey
             </h2>
             <p className="text-lg text-[var(--gray)] max-w-2xl mx-auto">
-              We combine expert instruction with a caring approach to help every child succeed in the water.
+              Families throughout Ormond Beach, Daytona Beach, and the surrounding areas trust us to help their children succeed in the water.
             </p>
           </div>
 
@@ -115,7 +115,7 @@ export default function Home() {
               <div className="w-14 h-14 flex items-center justify-center mb-4">
                 <Image
                   src="/images/icon-infant.png"
-                  alt="Infant"
+                  alt="Infant swim lessons icon"
                   width={56}
                   height={45}
                   className="object-contain"
@@ -133,7 +133,7 @@ export default function Home() {
               <div className="w-14 h-14 flex items-center justify-center mb-4">
                 <Image
                   src="/images/icon-toddler.png"
-                  alt="Toddler"
+                  alt="Toddler swim lessons icon"
                   width={56}
                   height={45}
                   className="object-contain"
@@ -151,7 +151,7 @@ export default function Home() {
               <div className="w-14 h-14 flex items-center justify-center mb-4">
                 <Image
                   src="/images/icon-swimmer.png"
-                  alt="School-Age"
+                  alt="School-age swim lessons icon"
                   width={56}
                   height={45}
                   className="object-contain"
@@ -169,7 +169,7 @@ export default function Home() {
               <div className="w-14 h-14 flex items-center justify-center mb-4">
                 <Image
                   src="/images/icon-toddler.png"
-                  alt="Stroke Development"
+                  alt="Stroke development swim lessons icon"
                   width={56}
                   height={45}
                   className="object-contain"
@@ -255,7 +255,7 @@ export default function Home() {
             Ready to Start Your Child's Swim Journey?
           </h2>
           <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Contact us today to learn more about our programs and find the perfect class for your child.
+            Contact us today to learn more about our swim programs in Ormond Beach and find the perfect class for your child.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -2,8 +2,8 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'FAQ | Aqua Journey Swim School',
-  description: 'Find answers to frequently asked questions about Aqua Journey Swim School, our classes, policies, and what to expect.',
+  title: 'FAQ | Aqua Journey Swim School | Ormond Beach, FL',
+  description: 'Find answers to frequently asked questions about swim lessons at Aqua Journey Swim School in Ormond Beach, FL. Learn about our classes, policies, and what to expect.',
 };
 
 const faqs = [

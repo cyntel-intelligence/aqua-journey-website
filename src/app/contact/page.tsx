@@ -203,10 +203,12 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all bg-white"
                   >
                     <option value="">Select an option</option>
-                    <option value="infant">Infant Classes (6-18 months)</option>
-                    <option value="toddler">Toddler Classes (18 months - 3 years)</option>
-                    <option value="preschool">Preschool Classes (3-5 years)</option>
-                    <option value="school-age">School-Age Classes (5+ years)</option>
+                    <option value="infant">Infant Survival Swimming (6 months+)</option>
+                    <option value="toddler">Toddler & Young Children (Walking - 4 years)</option>
+                    <option value="school-age">School-Age Swimming (5+ years)</option>
+                    <option value="stroke">Stroke Development (All ages)</option>
+                    <option value="gift-cards">Gift Cards</option>
+                    <option value="scholarships">Scholarships</option>
                     <option value="general">General Information</option>
                     <option value="other">Other</option>
                   </select>

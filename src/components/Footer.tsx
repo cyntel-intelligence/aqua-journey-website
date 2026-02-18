@@ -69,8 +69,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/classes#preschool" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Preschool Classes
+                <Link href="/classes#stroke" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Stroke Development
                 </Link>
               </li>
               <li>

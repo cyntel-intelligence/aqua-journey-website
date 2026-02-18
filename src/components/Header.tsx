@@ -47,9 +47,13 @@ export default function Header() {
               href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors"
+              className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors inline-flex items-center gap-1.5"
+              aria-label="Register Now (opens in new tab)"
             >
               Register Now
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
             <Link
               href="/gift-cards"
@@ -96,10 +100,14 @@ export default function Header() {
                 href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors text-center"
+                className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center gap-1.5"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Register Now (opens in new tab)"
               >
                 Register Now
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </a>
               <Link
                 href="/gift-cards"

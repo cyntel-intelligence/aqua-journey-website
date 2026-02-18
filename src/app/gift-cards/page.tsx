@@ -73,9 +73,13 @@ export default function GiftCardsPage() {
               href="https://buy.stripe.com/3cI5kD7ev3HYeoC2uIcQU00"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="inline-flex items-center gap-2 bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors"
+              aria-label="Purchase a Gift Card (opens in new tab)"
             >
               Purchase a Gift Card
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
           </div>
         </div>
@@ -122,7 +126,7 @@ export default function GiftCardsPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Questions About Gift Cards?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Contact us if you have any questions or need assistance with your purchase.
           </p>
           <Link

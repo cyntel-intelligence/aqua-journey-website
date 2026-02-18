@@ -21,9 +21,13 @@ export default function Home() {
                 href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-[var(--primary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
+                className="bg-white text-[var(--primary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center inline-flex items-center justify-center gap-2"
+                aria-label="Register Now (opens in new tab)"
               >
                 Register Now
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </a>
               <Link
                 href="/classes"
@@ -168,7 +172,7 @@ export default function Home() {
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-14 h-14 flex items-center justify-center mb-4">
                 <Image
-                  src="/images/icon-toddler.png"
+                  src="/images/icon-swimmer.png"
                   alt="Stroke development swim lessons icon"
                   width={56}
                   height={45}
@@ -254,7 +258,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Start Your Child's Swim Journey?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Contact us today to learn more about our swim programs in Ormond Beach and find the perfect class for your child.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

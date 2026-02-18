@@ -229,7 +229,7 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Join the Aqua Journey Family
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Ready to give your child the gift of swimming? We'd love to meet you.
           </p>
           <Link

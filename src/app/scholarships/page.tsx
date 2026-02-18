@@ -96,9 +96,10 @@ export default function ScholarshipsPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-[var(--primary)] hover:text-[var(--primary-dark)] font-semibold transition-colors"
+                  aria-label={`Learn more about ${partner.name} (opens in new tab)`}
                 >
                   Learn More
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
@@ -149,7 +150,7 @@ export default function ScholarshipsPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Questions About Scholarships?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             We're here to help you navigate the scholarship process. Contact us with any questions.
           </p>
           <Link

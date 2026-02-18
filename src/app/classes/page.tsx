@@ -49,16 +49,24 @@ const ClassIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) 
   return <div className={containerClasses}>{icons[icon]}</div>;
 };
 
+const iconAltText: Record<string, string> = {
+  infant: 'Infant swimming icon',
+  toddler: 'Toddler swimming icon',
+  swimming: 'School-age swimming icon',
+  trophy: 'Stroke development icon',
+};
+
 const ClassTitleIcon = ({ icon, size = 'md' }: { icon: string; size?: 'md' | 'lg' }) => {
   const imageSrc = classImages[icon];
   const sizeClasses = size === 'lg' ? 'w-16 h-16' : 'w-12 h-12';
+  const altText = iconAltText[icon] || 'Swimming class icon';
 
   if (imageSrc) {
     return (
       <div className={`${sizeClasses} flex items-center justify-center`}>
         <Image
           src={imageSrc}
-          alt=""
+          alt={altText}
           width={size === 'lg' ? 64 : 48}
           height={size === 'lg' ? 64 : 48}
           className="object-contain"
@@ -267,7 +275,7 @@ export default function ClassesPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Enroll?
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Register online today or contact us to learn more about our programs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -275,9 +283,13 @@ export default function ClassesPage() {
               href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-[var(--secondary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="bg-white text-[var(--secondary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center gap-2"
+              aria-label="Register Now (opens in new tab)"
             >
               Register Now
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
             </a>
             <Link
               href="/gift-cards"

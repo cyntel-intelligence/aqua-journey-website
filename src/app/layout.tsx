@@ -55,6 +55,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect to external resources for faster loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.google.com" />
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://behold.so" />
+        <link rel="dns-prefetch" href="https://app.jackrabbitclass.com" />
+        <link rel="dns-prefetch" href="https://buy.stripe.com" />
+        <link rel="dns-prefetch" href="https://formspree.io" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-ZNKQQQLFMV"
           strategy="afterInteractive"

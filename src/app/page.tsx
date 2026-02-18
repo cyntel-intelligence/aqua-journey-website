@@ -242,31 +242,13 @@ export default function Home() {
               See what's happening at Aqua Journey!
             </p>
           </div>
-          {/* Instagram Feed with Loading Skeleton */}
-          <div className="instagram-feed-container min-h-[300px] relative">
-            {/* Loading skeleton - shown while widget loads, hidden by widget CSS when ready */}
-            <div className="instagram-skeleton absolute inset-0 grid grid-cols-2 md:grid-cols-4 gap-4" aria-hidden="true">
-              {[...Array(8)].map((_, i) => (
-                <div
-                  key={i}
-                  className="aspect-square bg-gray-200 rounded-lg animate-pulse"
-                />
-              ))}
-            </div>
-            {/* @ts-expect-error Custom element from Behold */}
-            <behold-widget feed-id="jmuKnJAnY3sW9kjQkNa8"></behold-widget>
-          </div>
+          {/* @ts-expect-error Custom element from Behold */}
+          <behold-widget feed-id="jmuKnJAnY3sW9kjQkNa8"></behold-widget>
           <Script
             src="https://w.behold.so/widget.js"
             strategy="afterInteractive"
             type="module"
           />
-          <style>{`
-            /* Hide skeleton once behold widget has loaded */
-            .instagram-feed-container:has(behold-widget:not(:empty)) .instagram-skeleton {
-              display: none;
-            }
-          `}</style>
         </div>
       </section>
 

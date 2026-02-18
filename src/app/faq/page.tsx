@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'FAQ | Aqua Journey Swim School | Ormond Beach, FL',
@@ -119,15 +120,10 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
-            Find answers to common questions about our swim school and programs.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Frequently Asked Questions"
+        description="Find answers to common questions about our swim school and programs."
+      />
 
       {/* FAQ Content */}
       <section className="py-20 bg-white">

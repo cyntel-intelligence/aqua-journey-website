@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+import HeroSection from '@/components/HeroSection';
 
 // Service schema for SEO
 const servicesSchema = {
@@ -269,15 +270,10 @@ export default function ClassesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
       />
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Classes</h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
-            Age-appropriate programs designed to meet your child where they are and help them grow into confident swimmers.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Our Classes"
+        description="Age-appropriate programs designed to meet your child where they are and help them grow into confident swimmers."
+      />
 
       {/* Class Listings */}
       <section className="py-20 bg-white">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'Gift Cards | Aqua Journey Swim School | Ormond Beach, FL',
@@ -9,15 +10,10 @@ export const metadata: Metadata = {
 export default function GiftCardsPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Gift Cards</h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
-            Give the gift of swimming—a skill that lasts a lifetime.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="Gift Cards"
+        description="Give the gift of swimming—a skill that lasts a lifetime."
+      />
 
       {/* Main Content */}
       <section className="py-20 bg-white">

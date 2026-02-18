@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'About Us | Aqua Journey Swim School | Ormond Beach, FL',
@@ -10,15 +11,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Aqua Journey</h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
-            Dedicated to teaching children in Ormond Beach and the Daytona Beach area the life-saving skill of swimming in a safe, nurturing environment.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="About Aqua Journey"
+        description="Dedicated to teaching children in Ormond Beach and the Daytona Beach area the life-saving skill of swimming in a safe, nurturing environment."
+      />
 
       {/* Our Story */}
       <section className="py-20 bg-white">

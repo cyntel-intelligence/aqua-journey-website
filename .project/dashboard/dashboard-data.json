@@ -1,0 +1,24 @@
+{
+  "project": {
+    "name": "aqua-journey-website",
+    "version": "2.5.0",
+    "created": "2026-02-18 13:20:28 EST",
+    "last_updated": "2026-02-18 13:20:28 EST"
+  },
+  "timeline": {
+    "gantt_data": [],
+    "critical_path": ["Code Review", "Bug Fixes", "Visual Updates"],
+    "milestones": [
+      {"name": "Code Review Complete", "target": "Phase 0", "status": "pending"},
+      {"name": "Bug Fixes Complete", "target": "Phase 1", "status": "pending"},
+      {"name": "Visual Updates Complete", "target": "Phase 2", "status": "pending"},
+      {"name": "Performance/SEO Optimized", "target": "Phase 3", "status": "pending"}
+    ]
+  },
+  "metrics": {
+    "velocity": {"current": 0, "average": 0, "trend": "stable"},
+    "burndown": {"total_points": 0, "completed_points": 0, "remaining_points": 0},
+    "health": {"status": "green", "blockers": 0, "risks": 0}
+  },
+  "tickets": {"total": 10, "open": 10, "in_progress": 0, "completed": 0, "blocked": 0}
+}

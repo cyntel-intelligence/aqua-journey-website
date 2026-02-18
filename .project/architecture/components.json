@@ -1,0 +1,88 @@
+{
+  "$schema": "components-schema-v2.5",
+  "version": "2.5.0",
+  "last_updated": "2026-02-18 13:20:28 EST",
+
+  "components": {
+    "core": {
+      "name": "Next.js Application",
+      "type": "application",
+      "status": "current",
+      "description": "Main Next.js 16 website with React 19 and Tailwind CSS",
+      "dependencies": [],
+      "integrates_with": [],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["core", "nextjs"]
+    },
+    "pages": {
+      "name": "Page Components",
+      "type": "ui",
+      "status": "current",
+      "description": "Website pages: home, about, classes, contact, faq, gift-cards, scholarships, testimonials",
+      "dependencies": ["core"],
+      "integrates_with": ["header", "footer"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["pages", "ui"]
+    },
+    "header": {
+      "name": "Header Component",
+      "type": "ui",
+      "status": "current",
+      "description": "Site navigation header",
+      "dependencies": ["core"],
+      "integrates_with": ["pages"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["layout", "ui"]
+    },
+    "footer": {
+      "name": "Footer Component",
+      "type": "ui",
+      "status": "current",
+      "description": "Site footer with links and info",
+      "dependencies": ["core"],
+      "integrates_with": ["pages"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["layout", "ui"]
+    },
+    "seo": {
+      "name": "SEO Configuration",
+      "type": "infrastructure",
+      "status": "current",
+      "description": "Robots.txt, sitemap, and metadata",
+      "dependencies": ["core"],
+      "integrates_with": ["pages"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["seo", "infrastructure"]
+    }
+  },
+
+  "relationship_types": {
+    "dependencies": "Hard requirement - must exist for this to work",
+    "integrates_with": "Soft connection - works together but not required",
+    "risks_with": "Potential conflict or complication - needs careful consideration",
+    "conflicts_with": "Definite conflict - cannot coexist without significant rework"
+  },
+
+  "status_definitions": {
+    "current": "Implemented and active",
+    "planned": "On roadmap, will be built (target_phase required)",
+    "potential": "Possible future direction, not committed",
+    "deprecated": "Being phased out"
+  },
+
+  "component_types": [
+    "application",
+    "service",
+    "library",
+    "database",
+    "api",
+    "ui",
+    "integration",
+    "infrastructure"
+  ]
+}

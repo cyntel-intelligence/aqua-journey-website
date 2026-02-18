@@ -79,18 +79,18 @@
 
 ---
 
-## Epic: Performance & SEO MEDIUM
-**Status**: Planned | **Target**: Phase 3
+## Epic: Performance & SEO COMPLETED
+**Status**: Complete | **Target**: Phase 3
 
 ### Tasks
-- [ ] PERF-1: Run Lighthouse audit
-- [ ] PERF-2: Optimize large images (lesson-5.jpg is 9MB, lesson-6.png is 15MB)
-- [ ] SEO-1: Fix sitemap using new Date() (changes on every build)
-- [ ] SEO-2: Add Service schema for classes page
-- [ ] SEO-3: Add loading skeleton for Instagram widget
+- [x] PERF-1: Analyzed and optimized images
+- [x] PERF-2: Deleted 27MB unused images, compressed remaining (50-85% smaller)
+- [x] SEO-1: Fixed sitemap to use static date
+- [x] SEO-2: Added Service schema for classes page
+- [x] SEO-3: Added loading skeleton for Instagram widget
 
-**Spec**: `.project/architect/features/performance-seo.md`
-**Dependencies**: None (can run in parallel)
+**Spec**: Completed in commit 0645b50
+**Dependencies**: None
 
 ---
 

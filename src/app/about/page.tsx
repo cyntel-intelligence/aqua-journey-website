@@ -114,7 +114,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative aspect-square rounded-xl overflow-hidden">
               <Image
-                src="/images/facility.png"
+                src="/images/facility.jpg"
                 alt="Aqua Journey Swim School facility"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"

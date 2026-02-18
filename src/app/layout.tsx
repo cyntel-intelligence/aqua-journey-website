@@ -79,7 +79,7 @@ export default function RootLayout({
               "description": "Professional swim lessons for children of all ages. Our certified instructors provide a safe, nurturing environment where kids learn water safety and swimming skills.",
               "url": "https://aquajourneyswimschool.com",
               "logo": "https://aquajourneyswimschool.com/logo.png",
-              "image": "https://aquajourneyswimschool.com/images/facility.png",
+              "image": "https://aquajourneyswimschool.com/images/facility.jpg",
               "telephone": "+1-386-676-9555",
               "email": "info@aquajourneyswimschool.com",
               "address": {

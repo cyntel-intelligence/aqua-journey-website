@@ -1,7 +1,97 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
+
+// Service schema for SEO
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Service",
+        "name": "Infant Survival Swimming",
+        "description": "Life-saving swim lessons for infants 6 months and older. Learn to roll over to back float position and maintain float until help arrives.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Aqua Journey Swim School"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Ormond Beach, Florida"
+        },
+        "audience": {
+          "@type": "PeopleAudience",
+          "suggestedMinAge": "6 months"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Service",
+        "name": "Toddler & Young Children Swimming",
+        "description": "Swim lessons for walking children up to 4 years old. Learn the swim-float-swim sequence to reach safety independently.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Aqua Journey Swim School"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Ormond Beach, Florida"
+        },
+        "audience": {
+          "@type": "PeopleAudience",
+          "suggestedMinAge": "1 year",
+          "suggestedMaxAge": "4 years"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Service",
+        "name": "School-Age Swimming",
+        "description": "Swim lessons for children 5 years and older. Survival swimming fundamentals plus proper stroke technique development.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Aqua Journey Swim School"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Ormond Beach, Florida"
+        },
+        "audience": {
+          "@type": "PeopleAudience",
+          "suggestedMinAge": "5 years"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Service",
+        "name": "Stroke Development",
+        "description": "Advanced technique and endurance training for swimmers of all ages. Refine freestyle, backstroke, breaststroke, and butterfly.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Aqua Journey Swim School"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Ormond Beach, Florida"
+        }
+      }
+    }
+  ]
+};
 
 const classImages: Record<string, string> = {
   infant: '/images/icon-infant.png',
@@ -174,6 +264,11 @@ const classes = [
 export default function ClassesPage() {
   return (
     <>
+      <Script
+        id="services-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

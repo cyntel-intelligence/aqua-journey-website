@@ -1,54 +1,59 @@
 import type { MetadataRoute } from 'next';
 
+// Use a fixed date for sitemap to prevent unnecessary changes on each build
+// Update this date when actual content changes are made
+const LAST_CONTENT_UPDATE = '2026-02-18';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://aquajourneyswimschool.com';
+  const lastModified = new Date(LAST_CONTENT_UPDATE);
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/classes`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/testimonials`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/gift-cards`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
       url: `${baseUrl}/scholarships`,
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
     },

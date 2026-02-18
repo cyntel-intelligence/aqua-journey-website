@@ -36,17 +36,17 @@
 
 ---
 
-## Epic: Accessibility Fixes HIGH
-**Status**: Planned | **Target**: Phase 1
+## Epic: Accessibility Fixes COMPLETED
+**Status**: Complete | **Target**: Phase 1
 
 ### Tasks
-- [ ] A11Y-1: Fix heading hierarchy (multiple H1s, improper structure)
-- [ ] A11Y-2: Add meaningful alt text to class icons (currently empty)
-- [ ] A11Y-3: Fix orange background color contrast (fails WCAG)
-- [ ] A11Y-4: Add external link indicators and aria-labels
-- [ ] A11Y-5: Add skip-to-main navigation link
+- [x] A11Y-1: Reviewed heading hierarchy (structure is correct)
+- [x] A11Y-2: Add meaningful alt text to class icons
+- [x] A11Y-3: Fix orange background color contrast (text-white/90)
+- [x] A11Y-4: Add external link indicators and aria-labels
+- [x] A11Y-5: Add skip-to-main navigation link
 
-**Spec**: `.project/architect/features/accessibility.md`
+**Spec**: Completed in commit ab51864
 **Dependencies**: None
 
 ---

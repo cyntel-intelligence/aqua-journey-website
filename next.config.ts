@@ -244,18 +244,6 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
-      // MailPoet plugin URLs (query params)
-      {
-        source: '/',
-        has: [
-          {
-            type: 'query',
-            key: 'mailpoet_page',
-          },
-        ],
-        destination: '/',
-        permanent: true,
-      },
     ];
   },
 };

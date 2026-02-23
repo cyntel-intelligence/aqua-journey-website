@@ -1,14 +1,14 @@
 # Project Architecture
 
 ## Overview
-Aqua Journey website - a swim school/aquatics business marketing site built with Next.js 16, React 19, and Tailwind CSS v4. Static/SSG site with multiple pages for services, testimonials, contact, and more.
+Aqua Journey Swim School website - a Next.js 16 marketing site for a family-owned swim school in Ormond Beach, Florida. The site provides information about swim programs, class registration, and now adding email capture for water safety education content.
 
 ## Design Principles
-- Mobile-first responsive design
-- Performance-focused (Core Web Vitals)
-- Accessible (WCAG 2.1 AA target)
-- SEO optimized
-- Clean, maintainable code
+- Static-first: No backend server required
+- External integrations: Formspree, Stripe, Jack Rabbit Class
+- Mobile-responsive: Tailwind CSS 4
+- SEO optimized: Structured data, meta tags, sitemap
+- Accessibility: Semantic HTML, ARIA labels, keyboard navigation
 
 ## Component Map
 
@@ -21,41 +21,41 @@ graph TD
     classDef planned fill:#fff,stroke:#333,stroke-dasharray: 5 5
     classDef potential fill:#e0e0e0,stroke:#999,color:#666
 
-    core[Next.js Application]:::current
-    pages[Page Components]:::current
-    header[Header]:::current
-    footer[Footer]:::current
-    seo[SEO Config]:::current
+    core[Next.js Website]:::current
+    formspree[Formspree Contact]:::current
+    jackrabbit[Jack Rabbit Class]:::current
+    stripe[Stripe Gift Cards]:::current
+    analytics[Google Analytics]:::current
 
-    pages --> core
-    header --> core
-    footer --> core
-    seo --> core
-    pages -.-> header
-    pages -.-> footer
+    email_capture[Email Newsletter Signup]:::planned
+    email_service[Email Service Integration]:::planned
+    water_safety[Water Safety Resources]:::planned
+
+    core --> formspree
+    core --> jackrabbit
+    core --> stripe
+    core --> analytics
+
+    email_capture -.-> email_service
+    email_capture -.-> core
+    water_safety -.-> core
+    water_safety -.-> email_capture
 ```
 
 ## Tech Stack
 - **Framework**: Next.js 16.1.6
-- **UI Library**: React 19.2.3
-- **Styling**: Tailwind CSS v4
+- **UI**: React 19.2.3, Tailwind CSS 4
 - **Language**: TypeScript 5
-- **Build**: Turbopack (Next.js default)
-
-## Pages
-- `/` - Home page
-- `/about` - About the business
-- `/classes` - Swimming classes offered
-- `/contact` - Contact information/form
-- `/faq` - Frequently asked questions
-- `/gift-cards` - Gift card purchasing
-- `/scholarships` - Scholarship program
-- `/testimonials` - Customer testimonials
+- **Forms**: Formspree
+- **Payments**: Stripe (gift cards)
+- **Registration**: Jack Rabbit Class
+- **Analytics**: Google Analytics 4
 
 ## Constraints
-- Browser support: Modern browsers
-- Hosting: TBD (see DEPLOYMENT-GUIDE.md)
-- No backend/database (static site)
+- No backend infrastructure (static site)
+- Use existing brand colors (blue #03a9f4, orange #f79007)
+- Mobile-first responsive design
+- Maintain existing SEO optimization
 
 ## Technical Decisions
-[To be documented as made - see also decisions.md]
+- 2026-02-23: Use existing Formspree integration or similar service for email capture (no new backend needed)

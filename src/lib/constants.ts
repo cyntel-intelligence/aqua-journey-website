@@ -50,3 +50,10 @@ export const BUSINESS_HOURS = {
 } as const;
 
 export const POOL_TEMP = '90°F';
+
+// Formspree form IDs
+// Create new forms at https://formspree.io/forms
+export const FORMSPREE_IDS = {
+  contact: 'xrekqlpz',           // Existing contact form
+  newsletter: 'meelppoa',        // Newsletter signup form
+} as const;

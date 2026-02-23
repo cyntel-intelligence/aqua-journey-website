@@ -1,24 +1,24 @@
 {
   "project": {
-    "name": "aqua-journey-website",
+    "name": "aqua-journey-email-capture",
     "version": "2.5.0",
-    "created": "2026-02-18 13:20:28 EST",
-    "last_updated": "2026-02-18 13:20:28 EST"
+    "created": "2026-02-23 13:11:01 EST",
+    "last_updated": "2026-02-23 13:11:01 EST"
   },
   "timeline": {
     "gantt_data": [],
-    "critical_path": ["Code Review", "Bug Fixes", "Visual Updates"],
+    "critical_path": ["EMAIL-1", "EMAIL-2", "EMAIL-3"],
     "milestones": [
-      {"name": "Code Review Complete", "target": "Phase 0", "status": "pending"},
-      {"name": "Bug Fixes Complete", "target": "Phase 1", "status": "pending"},
-      {"name": "Visual Updates Complete", "target": "Phase 2", "status": "pending"},
-      {"name": "Performance/SEO Optimized", "target": "Phase 3", "status": "pending"}
+      {"name": "Project initialized", "date": "2026-02-23", "status": "completed"},
+      {"name": "Email capture built", "date": null, "status": "pending"},
+      {"name": "Water safety page live", "date": null, "status": "pending"},
+      {"name": "Production deploy", "date": null, "status": "pending"}
     ]
   },
   "metrics": {
     "velocity": {"current": 0, "average": 0, "trend": "stable"},
-    "burndown": {"total_points": 0, "completed_points": 0, "remaining_points": 0},
+    "burndown": {"total_points": 14, "completed_points": 0, "remaining_points": 14},
     "health": {"status": "green", "blockers": 0, "risks": 0}
   },
-  "tickets": {"total": 10, "open": 10, "in_progress": 0, "completed": 0, "blocked": 0}
+  "tickets": {"total": 14, "open": 14, "in_progress": 0, "completed": 0, "blocked": 0}
 }

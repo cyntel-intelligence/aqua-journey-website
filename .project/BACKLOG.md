@@ -2,95 +2,52 @@
 
 > **Next Actions**: See state.json for immediate priorities (top 3-5 items)
 
-**Last Review**: 2026-02-18
-**Next Review**: 2026-02-25
+**Last Review**: 2026-02-23
+**Next Review**: 2026-03-02
 
 ---
 
-## Epic: Code Review & Issue Discovery COMPLETED
-**Status**: Complete | **Target**: Phase 0
-
-### Tasks
-- [x] REVIEW-1: Review all page components for issues
-- [x] REVIEW-2: Check Header and Footer components
-- [x] REVIEW-3: Audit SEO configuration (sitemap, robots, meta)
-- [x] REVIEW-4: Check responsive design across pages
-- [x] REVIEW-5: Identify accessibility issues
-
-**Spec**: Completed - see decisions.md for findings
-**Dependencies**: None
-
----
-
-## Epic: Bug Fixes HIGH
+## Epic: Email Capture System CRITICAL
 **Status**: Active | **Target**: Phase 1
 
 ### Tasks
-- [x] BUG-1: Fix broken footer link to non-existent #preschool section
-- [x] BUG-2: Fix Stroke Development icon showing toddler image
-- [x] BUG-3: Update contact form options to match actual classes
-- [x] BUG-4: Add Gift Cards and Scholarships to contact form options
+- [x] EMAIL-1: Choose email service provider (Formspree)
+- [x] EMAIL-2: Create EmailSignup component with form validation
+- [x] EMAIL-3: Add email signup to homepage below testimonials section
+- [x] EMAIL-4: Add email signup to footer component
+- [ ] EMAIL-5: Configure Formspree form and update constants.ts
 
-**Spec**: Critical bugs fixed in commit 8f189d3
-**Dependencies**: Code Review epic (complete)
-
----
-
-## Epic: Accessibility Fixes COMPLETED
-**Status**: Complete | **Target**: Phase 1
-
-### Tasks
-- [x] A11Y-1: Reviewed heading hierarchy (structure is correct)
-- [x] A11Y-2: Add meaningful alt text to class icons
-- [x] A11Y-3: Fix orange background color contrast (text-white/90)
-- [x] A11Y-4: Add external link indicators and aria-labels
-- [x] A11Y-5: Add skip-to-main navigation link
-
-**Spec**: Completed in commit ab51864
+**Spec**: `.project/architect/features/email-capture.md`
 **Dependencies**: None
 
 ---
 
-## Epic: Code Quality MEDIUM
-**Status**: Planned | **Target**: Phase 2
+## Epic: Water Safety Content HIGH
+**Status**: Active | **Target**: Phase 1
 
 ### Tasks
-- [ ] CODE-1: Centralize business hours in constants file
-- [ ] CODE-2: Extract HeroSection component (repeated in all pages)
-- [ ] CODE-3: Add contact form loading/success states
-- [ ] CODE-4: Fix mobile menu not closing on external link click
-- [ ] CODE-5: Extract common SVG icons to reusable component
+- [x] SAFETY-1: Create water safety resources page (/water-safety)
+- [x] SAFETY-2: Write water safety tips content (drowning prevention, pool rules)
+- [ ] SAFETY-3: Add seasonal safety content (summer tips, pool party safety)
+- [ ] SAFETY-4: Create lead magnet content (downloadable PDF or email series)
+- [x] SAFETY-5: Link email signup with content offer
 
-**Spec**: `.project/architect/features/code-quality.md`
-**Dependencies**: None
+**Spec**: `.project/architect/features/water-safety-content.md`
+**Dependencies**: Email Capture System
 
 ---
 
-## Epic: Visual Updates MEDIUM
-**Status**: Planned | **Target**: Phase 2
+## Epic: Polish & Launch MEDIUM
+**Status**: Planned | **Target**: Phase 3
 
 ### Tasks
-- [ ] VIS-1: Add consistent hover states to buttons
-- [ ] VIS-2: Add micro-interactions and transitions
-- [ ] VIS-3: Consider adding breadcrumb navigation
+- [ ] LAUNCH-1: Mobile responsiveness testing
+- [ ] LAUNCH-2: SEO optimization for new pages
+- [ ] LAUNCH-3: Analytics event tracking for email signups
+- [ ] LAUNCH-4: Deploy to production
 
-**Spec**: `.project/architect/features/visual-updates.md`
-**Dependencies**: Bug Fixes epic
-
----
-
-## Epic: Performance & SEO COMPLETED
-**Status**: Complete | **Target**: Phase 3
-
-### Tasks
-- [x] PERF-1: Analyzed and optimized images
-- [x] PERF-2: Deleted 27MB unused images, compressed remaining (50-85% smaller)
-- [x] SEO-1: Fixed sitemap to use static date
-- [x] SEO-2: Added Service schema for classes page
-- [x] SEO-3: Added loading skeleton for Instagram widget
-
-**Spec**: Completed in commit 0645b50
-**Dependencies**: None
+**Spec**: TBD
+**Dependencies**: Email Capture System, Water Safety Content
 
 ---
 

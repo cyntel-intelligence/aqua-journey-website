@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { BUSINESS_INFO } from '@/lib/constants';
+import EmailSignup from './EmailSignup';
 
 export default function Footer() {
   return (
     <footer className="bg-[#1a2533] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="mb-4">
@@ -50,6 +51,11 @@ export default function Footer() {
               <li>
                 <Link href="/scholarships" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Scholarships
+                </Link>
+              </li>
+              <li>
+                <Link href="/water-safety" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Water Safety
                 </Link>
               </li>
             </ul>
@@ -106,6 +112,15 @@ export default function Footer() {
                 <span>{BUSINESS_INFO.email}</span>
               </li>
             </ul>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="md:col-span-4 lg:col-span-1 pt-8 md:pt-0 border-t md:border-t-0 border-gray-700">
+            <EmailSignup
+              variant="footer"
+              heading="Stay Updated"
+              description="Get water safety tips and swim lesson updates."
+            />
           </div>
         </div>
 

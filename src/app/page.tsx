@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
+import EmailSignup from '@/components/EmailSignup';
 
 export default function Home() {
   return (
@@ -226,6 +227,49 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Email Signup Section */}
+      <section className="py-20 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/wave-pattern.svg')] opacity-10"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Water Safety Tips for Parents
+              </h2>
+              <p className="text-xl text-blue-100 mb-6">
+                Join our newsletter to receive essential water safety information, drowning prevention tips, and updates about our swim programs.
+              </p>
+              <ul className="space-y-3 text-blue-100">
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Drowning prevention strategies
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Age-appropriate swimming milestones
+                </li>
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Pool party safety checklists
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-8 shadow-xl">
+              <EmailSignup
+                heading="Get Free Water Safety Tips"
+                description="Sign up to receive helpful tips, safety guides, and exclusive updates from Aqua Journey."
+              />
             </div>
           </div>
         </div>

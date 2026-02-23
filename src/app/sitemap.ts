@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 // Use a fixed date for sitemap to prevent unnecessary changes on each build
 // Update this date when actual content changes are made
-const LAST_CONTENT_UPDATE = '2026-02-18';
+const LAST_CONTENT_UPDATE = '2026-02-23';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://aquajourneyswimschool.com';
@@ -56,6 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: 'monthly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/water-safety`,
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
   ];
 }

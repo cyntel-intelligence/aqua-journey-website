@@ -1,63 +1,99 @@
 {
   "$schema": "components-schema-v2.5",
   "version": "2.5.0",
-  "last_updated": "2026-02-18 13:20:28 EST",
+  "last_updated": "2026-02-23 13:11:01 EST",
 
   "components": {
     "core": {
-      "name": "Next.js Application",
+      "name": "Next.js Website",
       "type": "application",
       "status": "current",
-      "description": "Main Next.js 16 website with React 19 and Tailwind CSS",
+      "description": "Main Next.js 16 application with React 19 and Tailwind CSS 4",
       "dependencies": [],
-      "integrates_with": [],
+      "integrates_with": ["formspree", "jackrabbit", "stripe", "analytics"],
       "risks_with": [],
       "conflicts_with": [],
-      "tags": ["core", "nextjs"]
+      "tags": ["core", "frontend"]
     },
-    "pages": {
-      "name": "Page Components",
+    "formspree": {
+      "name": "Formspree Contact Form",
+      "type": "integration",
+      "status": "current",
+      "description": "Contact form submission handling via Formspree",
+      "dependencies": [],
+      "integrates_with": ["core"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["integration", "forms"]
+    },
+    "jackrabbit": {
+      "name": "Jack Rabbit Class Registration",
+      "type": "integration",
+      "status": "current",
+      "description": "External class registration system",
+      "dependencies": [],
+      "integrates_with": ["core"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["integration", "registration"]
+    },
+    "stripe": {
+      "name": "Stripe Gift Cards",
+      "type": "integration",
+      "status": "current",
+      "description": "Gift card purchasing via Stripe",
+      "dependencies": [],
+      "integrates_with": ["core"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["integration", "payments"]
+    },
+    "analytics": {
+      "name": "Google Analytics",
+      "type": "integration",
+      "status": "current",
+      "description": "GA4 analytics tracking",
+      "dependencies": [],
+      "integrates_with": ["core"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["integration", "analytics"]
+    },
+    "email_capture": {
+      "name": "Email Newsletter Signup",
       "type": "ui",
-      "status": "current",
-      "description": "Website pages: home, about, classes, contact, faq, gift-cards, scholarships, testimonials",
-      "dependencies": ["core"],
-      "integrates_with": ["header", "footer"],
+      "status": "planned",
+      "target_phase": 1,
+      "description": "Email capture component for building subscriber list",
+      "dependencies": ["email_service"],
+      "integrates_with": ["core"],
       "risks_with": [],
       "conflicts_with": [],
-      "tags": ["pages", "ui"]
+      "tags": ["feature", "newsletter"]
     },
-    "header": {
-      "name": "Header Component",
+    "email_service": {
+      "name": "Email Service Integration",
+      "type": "integration",
+      "status": "planned",
+      "target_phase": 1,
+      "description": "Newsletter/email service (Formspree, Mailchimp, or ConvertKit)",
+      "dependencies": [],
+      "integrates_with": ["email_capture"],
+      "risks_with": [],
+      "conflicts_with": [],
+      "tags": ["integration", "email"]
+    },
+    "water_safety_content": {
+      "name": "Water Safety Resources",
       "type": "ui",
-      "status": "current",
-      "description": "Site navigation header",
-      "dependencies": ["core"],
-      "integrates_with": ["pages"],
+      "status": "planned",
+      "target_phase": 1,
+      "description": "Educational content page/section for water safety tips",
+      "dependencies": [],
+      "integrates_with": ["core", "email_capture"],
       "risks_with": [],
       "conflicts_with": [],
-      "tags": ["layout", "ui"]
-    },
-    "footer": {
-      "name": "Footer Component",
-      "type": "ui",
-      "status": "current",
-      "description": "Site footer with links and info",
-      "dependencies": ["core"],
-      "integrates_with": ["pages"],
-      "risks_with": [],
-      "conflicts_with": [],
-      "tags": ["layout", "ui"]
-    },
-    "seo": {
-      "name": "SEO Configuration",
-      "type": "infrastructure",
-      "status": "current",
-      "description": "Robots.txt, sitemap, and metadata",
-      "dependencies": ["core"],
-      "integrates_with": ["pages"],
-      "risks_with": [],
-      "conflicts_with": [],
-      "tags": ["seo", "infrastructure"]
+      "tags": ["feature", "content"]
     }
   },
 

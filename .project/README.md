@@ -14,10 +14,7 @@ This directory contains project tracking and management files.
 - `architect/` - Feature specs, decisions, staging plans, archive
 
 ## Commands
-
-**Note**: Slash commands are defined at the **user level** (`~/.claude/commands/`), not per-project. All projects share the same command definitions.
-
-- `/orch` - Continue work on this project
+- `/orch` - Start working on this project
 - `/max` - Maximum parallelization analysis (generates PARALLEL-EXECUTION-PLAN.md)
 - `/endsession` - Save progress before stopping (categorizes tasks)
 - `/super` - Review progress (use periodically)

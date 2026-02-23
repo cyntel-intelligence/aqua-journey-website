@@ -1,39 +1,28 @@
 {
-  "project_name": "aqua-journey-website",
+  "project_name": "aqua-journey-email-capture",
   "project_tla": "AQJ",
-  "created": "2026-02-18 13:20:28 EST",
-  "last_updated": "2026-02-18 14:18:33 EST",
-  "current_phase": "4 - Maintenance",
-  "phase_started": "2026-02-18",
+  "created": "2026-02-23 13:11:01 EST",
+  "last_updated": "2026-02-23 13:30:00 EST",
+  "current_phase": "1 - Email Capture System",
+  "phase_started": "2026-02-23",
   "completed_tasks": [
-    "Code review completed",
-    "Fixed broken footer preschool link",
-    "Fixed Stroke Development icon mismatch",
-    "Updated contact form options to match classes",
-    "Added skip-to-main navigation link",
-    "Added meaningful alt text to class icons",
-    "Fixed orange CTA section color contrast",
-    "Added external link indicators and aria-labels",
-    "Deleted 27MB unused images",
-    "Optimized remaining images (50-85% smaller)",
-    "Fixed sitemap static date",
-    "Added Service schema for classes",
-    "Centralized business info in constants.ts",
-    "Extracted HeroSection component",
-    "Added ContactForm with loading/success states",
-    "Improved mobile menu (close on outside click/escape)",
-    "Added preconnect hints for performance",
-    "Fixed MailPoet redirect loop (Google indexing)",
-    "Configured www to non-www redirect",
-    "Removed Instagram skeleton causing visual issues"
+    "EMAIL-2: Create EmailSignup component with form validation",
+    "EMAIL-3: Add email signup to homepage hero section",
+    "EMAIL-4: Add email signup to footer component",
+    "SAFETY-1: Create water safety resources page"
   ],
   "active_tasks": [],
   "pending_tasks": ["See .project/BACKLOG.md for full backlog"],
   "blockers": [],
   "next_actions": {
-    "ai_tasks": ["Create custom 404 page", "Create proper OG image for social sharing"],
-    "human_tasks": ["Re-validate URLs in Google Search Console", "Monitor indexing errors"],
+    "ai_tasks": [],
+    "human_tasks": [
+      "Create Formspree form for newsletter at formspree.io",
+      "Update FORMSPREE_IDS.newsletter in src/lib/constants.ts with new form ID",
+      "Test email signup on live site",
+      "Deploy to production"
+    ],
     "blocked_on": []
   },
-  "notes": "All phases complete. Site is production-ready. Google indexing issues should resolve after redirect fixes deploy."
+  "notes": "Email capture feature implemented. Water safety page created. Awaiting Formspree form ID setup before deployment."
 }

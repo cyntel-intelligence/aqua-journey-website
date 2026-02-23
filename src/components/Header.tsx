@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Classes', href: '/classes' },
+  { name: 'Water Safety', href: '/water-safety' },
   { name: 'Testimonials', href: '/testimonials' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },

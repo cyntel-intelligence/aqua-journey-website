@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { FORMSPREE_IDS } from '@/lib/constants';
 
 interface EmailSignupProps {
   variant?: 'inline' | 'card' | 'footer';
@@ -24,22 +23,23 @@ export default function EmailSignup({
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const email = formData.get('email') as string;
 
     try {
-      // Using Formspree - create a new form at formspree.io and update FORMSPREE_IDS.newsletter in constants.ts
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_IDS.newsletter}`, {
+      const response = await fetch('/api/newsletter', {
         method: 'POST',
-        body: formData,
         headers: {
-          Accept: 'application/json',
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ email }),
       });
+
+      const data = await response.json();
 
       if (response.ok) {
         setStatus('success');
         form.reset();
       } else {
-        const data = await response.json();
         setStatus('error');
         setErrorMessage(data.error || 'Something went wrong. Please try again.');
       }
@@ -86,7 +86,6 @@ export default function EmailSignup({
         <h3 className="font-semibold mb-4 text-white">{heading}</h3>
         <p className="text-gray-400 text-sm mb-4">{description}</p>
         <form onSubmit={handleSubmit} className="space-y-3">
-          <input type="hidden" name="_subject" value="New Newsletter Signup - Aqua Journey" />
           <div>
             <label htmlFor="footer-email" className="sr-only">Email address</label>
             <input
@@ -129,7 +128,6 @@ export default function EmailSignup({
     return (
       <div>
         <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-          <input type="hidden" name="_subject" value="New Newsletter Signup - Aqua Journey" />
           <div className="flex-1">
             <label htmlFor="inline-email" className="sr-only">Email address</label>
             <input
@@ -180,7 +178,6 @@ export default function EmailSignup({
         <p className="text-[var(--gray)]">{description}</p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <input type="hidden" name="_subject" value="New Newsletter Signup - Aqua Journey" />
         <div>
           <label htmlFor="card-email" className="sr-only">Email address</label>
           <input

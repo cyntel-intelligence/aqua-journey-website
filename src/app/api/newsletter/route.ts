@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
+const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID;
 const MAILERLITE_API_URL = 'https://connect.mailerlite.com/api';
 
 export async function POST(request: NextRequest) {
@@ -33,6 +34,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         email,
         status: 'active',
+        groups: MAILERLITE_GROUP_ID ? [MAILERLITE_GROUP_ID] : [],
       }),
     });
 

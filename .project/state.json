@@ -2,14 +2,18 @@
   "project_name": "aqua-journey-email-capture",
   "project_tla": "AQJ",
   "created": "2026-02-23 13:11:01 EST",
-  "last_updated": "2026-02-23 13:30:00 EST",
+  "last_updated": "2026-02-23 14:54:18 EST",
   "current_phase": "1 - Email Capture System",
   "phase_started": "2026-02-23",
   "completed_tasks": [
     "EMAIL-2: Create EmailSignup component with form validation",
     "EMAIL-3: Add email signup to homepage hero section",
     "EMAIL-4: Add email signup to footer component",
-    "SAFETY-1: Create water safety resources page"
+    "SAFETY-1: Create water safety resources page",
+    "Reduce popup delay from 30s to 20s",
+    "Integrate MailerLite for newsletter signups (replace Formspree)",
+    "Add MailerLite group ID for automation triggers",
+    "Create 6-email water safety drip sequence documentation"
   ],
   "active_tasks": [],
   "pending_tasks": ["See .project/BACKLOG.md for full backlog"],
@@ -17,12 +21,11 @@
   "next_actions": {
     "ai_tasks": [],
     "human_tasks": [
-      "Create Formspree form for newsletter at formspree.io",
-      "Update FORMSPREE_IDS.newsletter in src/lib/constants.ts with new form ID",
-      "Test email signup on live site",
-      "Deploy to production"
+      "Carly: Authenticate sending domain in MailerLite (DNS records)",
+      "Carly: Build 6-email automation sequence in MailerLite using docs/email-sequence-water-safety.md",
+      "Carly: Delete test subscribers from MailerLite (test@, verceltest@, livetest@)"
     ],
     "blocked_on": []
   },
-  "notes": "Email capture feature implemented. Water safety page created. Awaiting Formspree form ID setup before deployment."
+  "notes": "MailerLite integration complete. Newsletter signup live on Vercel. Email sequence content created. Awaiting domain authentication and automation setup in MailerLite."
 }

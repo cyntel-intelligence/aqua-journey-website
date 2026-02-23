@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import EmailSignup from './EmailSignup';
 
-const POPUP_DELAY_MS = 30000; // 30 seconds
+const POPUP_DELAY_MS = 20000; // 20 seconds
 const STORAGE_KEY = 'aqua-journey-popup-dismissed';
 
 export default function EmailPopup() {

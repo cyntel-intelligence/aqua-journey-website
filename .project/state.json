@@ -2,7 +2,7 @@
   "project_name": "aqua-journey-email-capture",
   "project_tla": "AQJ",
   "created": "2026-02-23 13:11:01 EST",
-  "last_updated": "2026-02-23 14:54:18 EST",
+  "last_updated": "2026-02-24 11:09:57 EST",
   "current_phase": "1 - Email Capture System",
   "phase_started": "2026-02-23",
   "completed_tasks": [
@@ -13,19 +13,23 @@
     "Reduce popup delay from 30s to 20s",
     "Integrate MailerLite for newsletter signups (replace Formspree)",
     "Add MailerLite group ID for automation triggers",
-    "Create 6-email water safety drip sequence documentation"
+    "Create 6-email water safety drip sequence documentation",
+    "Add DNS records for MailerLite domain authentication (SPF, DKIM, verification TXT)"
   ],
   "active_tasks": [],
   "pending_tasks": ["See .project/BACKLOG.md for full backlog"],
   "blockers": [],
   "next_actions": {
-    "ai_tasks": [],
+    "ai_tasks": [
+      "SAFETY-3: Add seasonal safety content",
+      "SAFETY-4: Create lead magnet PDF"
+    ],
     "human_tasks": [
-      "Carly: Authenticate sending domain in MailerLite (DNS records)",
-      "Carly: Build 6-email automation sequence in MailerLite using docs/email-sequence-water-safety.md",
-      "Carly: Delete test subscribers from MailerLite (test@, verceltest@, livetest@)"
+      "Carly: Verify DNS records in MailerLite (wait 30-60 min for propagation)",
+      "Carly: Build 6-email automation sequence in MailerLite",
+      "Carly: Delete test subscribers from MailerLite"
     ],
     "blocked_on": []
   },
-  "notes": "MailerLite integration complete. Newsletter signup live on Vercel. Email sequence content created. Awaiting domain authentication and automation setup in MailerLite."
+  "notes": "DNS records added to Bluehost for MailerLite (SPF merged with Google/Bluehost, DKIM CNAME, domain verification TXT). Waiting for DNS propagation. Email automation sequence started - Email 1 template exists, needs content and emails 2-6."
 }

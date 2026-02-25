@@ -6,12 +6,14 @@ interface EmailSignupProps {
   variant?: 'inline' | 'card' | 'footer';
   heading?: string;
   description?: string;
+  onSuccess?: () => void;
 }
 
 export default function EmailSignup({
   variant = 'card',
   heading = 'Get Water Safety Tips',
   description = 'Join our newsletter for water safety tips, swim lesson updates, and exclusive offers.',
+  onSuccess,
 }: EmailSignupProps) {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -39,6 +41,7 @@ export default function EmailSignup({
       if (response.ok) {
         setStatus('success');
         form.reset();
+        onSuccess?.();
       } else {
         setStatus('error');
         setErrorMessage(data.error || 'Something went wrong. Please try again.');

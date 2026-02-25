@@ -79,7 +79,7 @@ export default function EmailPopup() {
         </div>
 
         {/* Content */}
-        <div className="p-6" onClick={handleSuccess}>
+        <div className="p-6">
           <div className="text-center mb-5">
             <p className="text-[var(--foreground)]">
               Certain swimsuit colors can make your child <strong>nearly invisible</strong> in the water. Get water safety tips sent to your inbox—including which colors to avoid.
@@ -89,6 +89,7 @@ export default function EmailPopup() {
             variant="inline"
             heading=""
             description=""
+            onSuccess={handleSuccess}
           />
         </div>
       </div>

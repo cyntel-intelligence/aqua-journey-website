@@ -15,7 +15,8 @@
     "Add MailerLite group ID for automation triggers",
     "Create 6-email water safety drip sequence documentation",
     "Add DNS records for MailerLite domain authentication (SPF, DKIM, verification TXT)",
-    "Fix email popup closing on input click"
+    "Fix email popup closing on input click",
+    "Verify DNS records in MailerLite (propagated successfully)"
   ],
   "active_tasks": [],
   "pending_tasks": ["See .project/BACKLOG.md for full backlog"],
@@ -26,11 +27,10 @@
       "SAFETY-4: Create lead magnet PDF"
     ],
     "human_tasks": [
-      "Carly: Verify DNS records in MailerLite (wait 30-60 min for propagation)",
       "Carly: Build 6-email automation sequence in MailerLite",
       "Carly: Delete test subscribers from MailerLite"
     ],
     "blocked_on": []
   },
-  "notes": "DNS records added to Bluehost for MailerLite (SPF merged with Google/Bluehost, DKIM CNAME, domain verification TXT). Waiting for DNS propagation. Email automation sequence started - Email 1 template exists, needs content and emails 2-6."
+  "notes": "DNS records verified in MailerLite - domain authenticated. Ready to build 6-email automation sequence."
 }

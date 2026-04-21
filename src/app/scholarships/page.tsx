@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 export const metadata: Metadata = {
   title: 'Scholarships | Aqua Journey Swim School | Ormond Beach, FL',
   description: 'Scholarship opportunities for swim lessons in Ormond Beach at Aqua Journey Swim School. Partners include Step Up for Students, Down Syndrome Foundation, and Make A Splash Foundation.',
+  keywords: 'swim lesson scholarships, Step Up for Students swimming, affordable swim lessons Florida, swim scholarship Ormond Beach, Down Syndrome swimming',
 };
 
 const partners = [

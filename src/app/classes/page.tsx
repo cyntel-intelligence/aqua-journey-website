@@ -197,6 +197,7 @@ const ClassPhotoBox = ({ icon, color }: { icon: string; color: string }) => {
 export const metadata: Metadata = {
   title: 'Swim Classes | Aqua Journey Swim School | Ormond Beach, FL',
   description: 'Swim lessons in Ormond Beach for infants, toddlers, and school-age children. Find the right swim class for your child in the Daytona Beach area.',
+  keywords: 'swim classes Ormond Beach, infant survival swimming, toddler swim lessons, school-age swimming, stroke development, private swim lessons Florida',
 };
 
 const classes = [

@@ -261,7 +261,7 @@ export default function WaterSafetyPage() {
         </div>
       </section>
 
-      {/* JSON-LD Structured Data */}
+      {/* JSON-LD Structured Data - Article */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -277,7 +277,75 @@ export default function WaterSafetyPage() {
             publisher: {
               '@type': 'Organization',
               name: 'Aqua Journey Swim School',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://aquajourneyswimschool.com/logo.png',
+              },
             },
+            mainEntityOfPage: {
+              '@type': 'WebPage',
+              '@id': 'https://aquajourneyswimschool.com/water-safety',
+            },
+          }),
+        }}
+      />
+      {/* JSON-LD FAQ Schema for Water Safety Tips */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Why should I never leave children unattended near water?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Designate a responsible adult as a "Water Watcher" who actively supervises children in and around water. No phone, no book—just watching. Drowning can happen in seconds and is often silent.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why is learning CPR important for parents?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Every parent and caregiver should know CPR. In a drowning emergency, immediate CPR can be the difference between life and death.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'At what age can children start swim lessons?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Swimming lessons significantly reduce the risk of drowning. Children as young as 6 months can begin learning water survival skills.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are layers of protection for pool safety?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Combine multiple safety measures: pool fences, door alarms, pool covers, and constant supervision. No single barrier is enough.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the signs of drowning?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Drowning is often silent—no splashing or screaming. Look for: head low in water, eyes glassy, hyperventilating, or trying to swim but not moving.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What pool rules should be established?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No running, no diving in shallow water, no pushing, and always swim with a buddy. Consistent rules prevent accidents.',
+                },
+              },
+            ],
           }),
         }}
       />

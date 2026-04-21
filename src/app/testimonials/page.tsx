@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 export const metadata: Metadata = {
   title: 'Testimonials | Aqua Journey Swim School | Ormond Beach, FL',
   description: 'Read what Ormond Beach and Daytona Beach area parents are saying about Aqua Journey Swim School and how our swim lessons have helped their children.',
+  keywords: 'swim school reviews, Aqua Journey testimonials, parent reviews swim lessons, Ormond Beach swim school ratings',
 };
 
 const testimonials = [

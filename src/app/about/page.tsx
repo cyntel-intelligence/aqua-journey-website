@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 export const metadata: Metadata = {
   title: 'About Us | Aqua Journey Swim School | Ormond Beach, FL',
   description: 'Learn about Aqua Journey Swim School in Ormond Beach, FL. Our experienced instructors teach children water safety and swimming skills in the Daytona Beach area.',
+  keywords: 'about Aqua Journey, swim school Ormond Beach, swimming instructors Daytona Beach, family swim school Florida, certified swim instructors',
 };
 
 export default function AboutPage() {

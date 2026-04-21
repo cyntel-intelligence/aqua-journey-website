@@ -6,6 +6,7 @@ import HeroSection from '@/components/HeroSection';
 export const metadata: Metadata = {
   title: 'FAQ | Aqua Journey Swim School | Ormond Beach, FL',
   description: 'Find answers to frequently asked questions about swim lessons at Aqua Journey Swim School in Ormond Beach, FL. Learn about our classes, policies, and what to expect.',
+  keywords: 'swim lesson FAQ, swimming questions, what to expect swim lessons, swim school policies, Ormond Beach swim FAQ',
 };
 
 const faqs = [

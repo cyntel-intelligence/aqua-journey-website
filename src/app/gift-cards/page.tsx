@@ -5,6 +5,7 @@ import HeroSection from '@/components/HeroSection';
 export const metadata: Metadata = {
   title: 'Gift Cards | Aqua Journey Swim School | Ormond Beach, FL',
   description: 'Give the gift of swimming! Purchase Aqua Journey Swim School gift cards for swim lessons in Ormond Beach and the Daytona Beach area.',
+  keywords: 'swim lesson gift card, swimming gift certificate, Aqua Journey gift card, swim school gift Ormond Beach',
 };
 
 export default function GiftCardsPage() {

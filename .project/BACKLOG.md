@@ -42,7 +42,7 @@
 
 ### Tasks
 - [ ] LAUNCH-1: Mobile responsiveness testing
-- [ ] LAUNCH-2: SEO optimization for new pages
+- [x] LAUNCH-2: SEO optimization for new pages
 - [ ] LAUNCH-3: Analytics event tracking for email signups
 - [ ] LAUNCH-4: Deploy to production
 

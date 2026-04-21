@@ -1,7 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Script from 'next/script';
+import type { Metadata } from 'next';
 import EmailSignup from '@/components/EmailSignup';
+
+export const metadata: Metadata = {
+  title: 'Swim Lessons in Ormond Beach, FL | Aqua Journey Swim School',
+  description: 'Professional swim lessons for infants, toddlers & kids in Ormond Beach, FL. Indoor heated pools, certified instructors, one-on-one attention. Start your child\'s water safety journey today!',
+  keywords: 'swim lessons Ormond Beach, swimming classes Daytona Beach, infant swim lessons Florida, toddler swim school, water safety classes, learn to swim Volusia County',
+  openGraph: {
+    title: 'Swim Lessons in Ormond Beach, FL | Aqua Journey Swim School',
+    description: 'Teaching Life-Saving Skills, One Swimmer at a Time. Professional one-on-one swim lessons in indoor heated pools.',
+    url: 'https://aquajourneyswimschool.com',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   return (

@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact Us | Aqua Journey Swim School | Ormond Beach, FL',
   description: 'Contact Aqua Journey Swim School in Ormond Beach, FL. We\'re here to answer your questions about swim lessons in the Daytona Beach area.',
+  keywords: 'contact swim school, Aqua Journey phone number, swim lessons inquiry, Ormond Beach swim school address, Daytona Beach swimming',
 };
 
 export default function ContactPage() {

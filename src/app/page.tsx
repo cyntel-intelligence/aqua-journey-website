@@ -102,6 +102,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Step Up Scholarships Badge */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link
+            href="/scholarships"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 group"
+          >
+            <Image
+              src="/images/step-up-ema-badge.webp"
+              alt="Step Up For Students EMA Marketplace Provider"
+              width={200}
+              height={200}
+              className="w-32 sm:w-40 md:w-48 h-auto"
+            />
+            <div className="text-center sm:text-left">
+              <p className="text-lg sm:text-xl font-semibold text-[var(--foreground)] group-hover:text-[var(--primary)] transition-colors">
+                We Accept Step Up Scholarships
+              </p>
+              <p className="text-sm text-[var(--gray)]">
+                Learn more about scholarship options →
+              </p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Programs Overview */}
       <section className="py-20 bg-[var(--gray-light)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

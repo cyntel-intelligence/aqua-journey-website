@@ -28,7 +28,7 @@
 ### Tasks
 - [x] SAFETY-1: Create water safety resources page (/water-safety)
 - [x] SAFETY-2: Write water safety tips content (drowning prevention, pool rules)
-- [ ] SAFETY-3: Add seasonal safety content (summer tips, pool party safety)
+- [x] SAFETY-3: Add seasonal safety content (summer tips, pool party safety)
 - [ ] SAFETY-4: Create lead magnet content (downloadable PDF or email series)
 - [x] SAFETY-5: Link email signup with content offer
 

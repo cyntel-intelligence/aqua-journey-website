@@ -90,6 +90,51 @@ const ageGuidelines = [
   },
 ];
 
+const seasonalSafetyTips = [
+  {
+    title: 'Summer Pool Party Safety',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+    ),
+    tips: [
+      'Designate rotating water watchers (15-min shifts)',
+      'No diving in shallow water',
+      'Keep pool area clear of toys when not swimming',
+      'Establish clear pool rules before guests arrive',
+      'Know how many children are in the water at all times',
+    ],
+  },
+  {
+    title: 'Beach & Open Water',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    tips: [
+      'Swim near lifeguards',
+      'Understand rip currents (swim parallel to shore)',
+      'Check water conditions before swimming',
+      'Never swim alone',
+    ],
+  },
+  {
+    title: 'Backyard Inflatable Pools',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+      </svg>
+    ),
+    tips: [
+      'Empty and store upside down after each use',
+      'Never leave filled overnight',
+      'Same supervision rules as permanent pools',
+    ],
+  },
+];
+
 export default function WaterSafetyPage() {
   return (
     <>
@@ -171,6 +216,46 @@ export default function WaterSafetyPage() {
                   Skills: {guideline.skills}
                 </p>
                 <p className="text-sm text-[var(--gray)]">{guideline.tips}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Seasonal Safety Section */}
+      <section className="py-20 bg-[var(--gray-light)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
+              Seasonal Safety Tips
+            </h2>
+            <p className="text-lg text-[var(--gray)] max-w-2xl mx-auto">
+              Different environments require different precautions. Stay safe wherever water activities take you.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {seasonalSafetyTips.map((category, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="w-14 h-14 bg-[var(--secondary)] rounded-full flex items-center justify-center text-white mb-4">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-[var(--foreground)] mb-4">
+                  {category.title}
+                </h3>
+                <ul className="space-y-2">
+                  {category.tips.map((tip, tipIndex) => (
+                    <li key={tipIndex} className="flex items-start gap-2 text-[var(--gray)]">
+                      <svg className="w-5 h-5 text-[var(--primary)] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{tip}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

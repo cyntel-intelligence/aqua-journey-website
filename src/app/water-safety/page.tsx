@@ -67,29 +67,6 @@ const safetyTips = [
   },
 ];
 
-const ageGuidelines = [
-  {
-    age: 'Infants (6+ months)',
-    skills: 'Roll back to float, breath control',
-    tips: 'Never use flotation devices as a substitute for supervision. Infants can learn survival skills.',
-  },
-  {
-    age: 'Toddlers (1-3 years)',
-    skills: 'Swim-float-swim sequence, self-rescue',
-    tips: 'This age group is at highest risk. Constant supervision and swim lessons are critical.',
-  },
-  {
-    age: 'Preschool (3-5 years)',
-    skills: 'Basic strokes, treading water, getting to safety',
-    tips: 'Can understand and follow pool rules. Still need constant adult supervision.',
-  },
-  {
-    age: 'School-Age (5+ years)',
-    skills: 'All strokes, diving, endurance swimming',
-    tips: 'Can be more independent but should never swim alone. Teach them to help others safely.',
-  },
-];
-
 const seasonalSafetyTips = [
   {
     title: 'Summer Pool Party Safety',
@@ -188,34 +165,6 @@ export default function WaterSafetyPage() {
                   {tip.title}
                 </h3>
                 <p className="text-[var(--gray)]">{tip.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Age-Appropriate Guidelines */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--foreground)] mb-4">
-              Swimming Milestones by Age
-            </h2>
-            <p className="text-lg text-[var(--gray)] max-w-2xl mx-auto">
-              Understanding what your child can learn at each age helps set realistic expectations.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {ageGuidelines.map((guideline, index) => (
-              <div key={index} className="bg-[var(--gray-light)] rounded-xl p-6">
-                <h3 className="text-lg font-bold text-[var(--primary)] mb-2">
-                  {guideline.age}
-                </h3>
-                <p className="text-sm font-medium text-[var(--foreground)] mb-2">
-                  Skills: {guideline.skills}
-                </p>
-                <p className="text-sm text-[var(--gray)]">{guideline.tips}</p>
               </div>
             ))}
           </div>

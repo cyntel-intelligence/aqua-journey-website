@@ -96,7 +96,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-lg text-[var(--gray)] hover:bg-gray-100"
+            className="md:hidden p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg text-[var(--gray)] hover:bg-gray-100"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -120,7 +120,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-[var(--foreground)] hover:text-[var(--primary)] transition-colors font-medium px-2 py-1"
+                  className="text-[var(--foreground)] hover:text-[var(--primary)] transition-colors font-medium px-3 py-3 min-h-[44px] flex items-center"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

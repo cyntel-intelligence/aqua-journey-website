@@ -115,7 +115,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="md:col-span-4 lg:col-span-1 pt-8 md:pt-0 border-t md:border-t-0 border-gray-700">
+          <div className="md:col-span-2 lg:col-span-1 pt-8 md:pt-0 border-t md:border-t-0 border-gray-700">
             <EmailSignup
               variant="footer"
               heading="Stay Updated"

@@ -2,7 +2,7 @@
   "project_name": "aqua-journey-email-capture",
   "project_tla": "AQJ",
   "created": "2026-02-23 13:11:01 EST",
-  "last_updated": "2026-07-29 13:56:14 EDT",
+  "last_updated": "2026-07-29 14:04:00 EDT",
   "current_phase": "3 - Polish & Launch",
   "phase_started": "2026-04-21",
   "completed_tasks": [
@@ -26,7 +26,8 @@
     "EMAIL-5: N/A - Switched to MailerLite",
     "LAUNCH-3: Analytics event tracking for email signups",
     "Created 5 HTML email templates for MailerLite (emails 2-6)",
-    "Rewrote email 5 to focus on survival swimming programs"
+    "Rewrote email 5 to focus on survival swimming programs",
+    "Reviewed welcome email and provided improvement suggestions"
   ],
   "active_tasks": [],
   "pending_tasks": ["See .project/BACKLOG.md for full backlog"],
@@ -34,6 +35,7 @@
   "next_actions": {
     "ai_tasks": [],
     "human_tasks": [
+      "Carly: Apply welcome email improvements (personalize, bigger CTA, add TikTok, fix branding typo)",
       "Carly: Upload email ZIP files to MailerLite",
       "Carly: Build 6-email automation sequence in MailerLite",
       "Carly: Delete test subscribers from MailerLite"

@@ -21,7 +21,9 @@
     "SAFETY-4: Create lead magnet PDF (water safety checklist)",
     "Add Step Up For Students / EMA badge to homepage",
     "LAUNCH-1: Mobile responsiveness testing",
-    "LAUNCH-2: SEO optimization for new pages"
+    "LAUNCH-2: SEO optimization for new pages",
+    "LAUNCH-4: Deploy to production",
+    "EMAIL-5: N/A - Switched to MailerLite"
   ],
   "active_tasks": [],
   "pending_tasks": ["See .project/BACKLOG.md for full backlog"],

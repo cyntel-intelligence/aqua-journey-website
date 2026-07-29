@@ -15,7 +15,7 @@
 - [x] EMAIL-2: Create EmailSignup component with form validation
 - [x] EMAIL-3: Add email signup to homepage below testimonials section
 - [x] EMAIL-4: Add email signup to footer component
-- [ ] EMAIL-5: Configure Formspree form and update constants.ts
+- [x] EMAIL-5: ~~Configure Formspree~~ N/A - Switched to MailerLite (Session 1)
 
 **Spec**: `.project/architect/features/email-capture.md`
 **Dependencies**: None
@@ -44,7 +44,7 @@
 - [x] LAUNCH-1: Mobile responsiveness testing
 - [x] LAUNCH-2: SEO optimization for new pages
 - [ ] LAUNCH-3: Analytics event tracking for email signups
-- [ ] LAUNCH-4: Deploy to production
+- [x] LAUNCH-4: Deploy to production ✅ (Session 5)
 
 **Spec**: TBD
 **Dependencies**: Email Capture System, Water Safety Content

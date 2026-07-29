@@ -74,6 +74,14 @@ export default function Header() {
               </Link>
             ))}
             <a
+              href="https://app.aquajourneyswimschool.com/parent/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--foreground)] hover:text-[var(--primary)] transition-colors font-medium"
+            >
+              Parent Portal
+            </a>
+            <a
               href="https://app.aquajourneyswimschool.com/enroll"
               target="_blank"
               rel="noopener noreferrer"
@@ -126,6 +134,15 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href="https://app.aquajourneyswimschool.com/parent/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--foreground)] hover:text-[var(--primary)] transition-colors font-medium px-3 py-3 min-h-[44px] flex items-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Parent Portal
+              </a>
               <a
                 href="https://app.aquajourneyswimschool.com/enroll"
                 target="_blank"

@@ -29,6 +29,16 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
+                <a
+                  href="https://app.aquajourneyswimschool.com/parent/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  Parent Portal
+                </a>
+              </li>
+              <li>
                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
                   About Us
                 </Link>

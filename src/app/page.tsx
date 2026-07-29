@@ -32,7 +32,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+                href="https://app.aquajourneyswimschool.com/enroll"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white text-[var(--primary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center inline-flex items-center justify-center gap-2"

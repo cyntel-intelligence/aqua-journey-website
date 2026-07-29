@@ -74,7 +74,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+              href="https://app.aquajourneyswimschool.com/enroll"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors inline-flex items-center gap-1.5"
@@ -127,7 +127,7 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+                href="https://app.aquajourneyswimschool.com/enroll"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-6 py-2.5 rounded-lg font-semibold transition-colors text-center inline-flex items-center justify-center gap-1.5"

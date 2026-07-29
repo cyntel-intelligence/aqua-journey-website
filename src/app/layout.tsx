@@ -62,7 +62,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google.com" />
         <link rel="preconnect" href="https://maps.googleapis.com" />
         <link rel="preconnect" href="https://behold.so" />
-        <link rel="dns-prefetch" href="https://app.jackrabbitclass.com" />
+        <link rel="dns-prefetch" href="https://app.aquajourneyswimschool.com" />
         <link rel="dns-prefetch" href="https://buy.stripe.com" />
         <link rel="dns-prefetch" href="https://formspree.io" />
         <Script

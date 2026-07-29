@@ -241,7 +241,7 @@ export default function WaterSafetyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://app.jackrabbitclass.com/regv2.asp?id=529327"
+              href="https://app.aquajourneyswimschool.com/enroll"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-[var(--secondary)] hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center justify-center gap-2"

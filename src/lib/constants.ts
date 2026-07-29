@@ -23,7 +23,7 @@ export const BUSINESS_INFO = {
     instagram: 'https://www.instagram.com/aquajourneyswimschool/',
     tiktok: 'https://www.tiktok.com/@aqua.journeys',
   },
-  registration: 'https://app.jackrabbitclass.com/regv2.asp?id=529327',
+  registration: 'https://app.aquajourneyswimschool.com/enroll',
   giftCards: 'https://buy.stripe.com/3cI5kD7ev3HYeoC2uIcQU00',
 } as const;
 

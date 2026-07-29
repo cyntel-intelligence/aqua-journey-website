@@ -2,6 +2,12 @@
 
 import { useState, FormEvent } from 'react';
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 interface EmailSignupProps {
   variant?: 'inline' | 'card' | 'footer';
   heading?: string;
@@ -41,6 +47,14 @@ export default function EmailSignup({
       if (response.ok) {
         setStatus('success');
         form.reset();
+
+        // Track signup in Google Analytics
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'newsletter_signup', {
+            signup_location: variant,
+          });
+        }
+
         onSuccess?.();
       } else {
         setStatus('error');

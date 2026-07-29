@@ -84,7 +84,7 @@ Even with the brightest swimsuit, active supervision is critical. Follow these g
 The best protection is teaching your child to swim. At Aqua Journey, our heated 90°F pool and experienced instructors make learning comfortable and fun.
 
 **[BUTTON: View Our Classes]**
-→ https://www.aquajourneyswimschool.com/classes
+→ https://app.aquajourneyswimschool.com/enroll
 
 ---
 
@@ -167,7 +167,7 @@ Use a physical object — a bright wristband, lanyard, or card — that the desi
 Swim lessons dramatically reduce drowning risk. Our instructors teach not just swimming, but water safety and self-rescue skills.
 
 **[BUTTON: Book a Lesson]**
-→ https://www.aquajourneyswimschool.com/classes
+→ https://app.aquajourneyswimschool.com/enroll
 
 ---
 
@@ -249,7 +249,7 @@ Available on iOS and Android
 ---
 
 **[BUTTON: Schedule Swim Lessons]**
-→ https://www.aquajourneyswimschool.com/classes
+→ https://app.aquajourneyswimschool.com/enroll
 
 Prevention is the best protection. Teach them to swim.
 
@@ -341,7 +341,7 @@ This alone reduces drowning risk by **83%**.
 ---
 
 **[BUTTON: Learn More About Water Safety]**
-→ https://www.aquajourneyswimschool.com/water-safety
+→ https://aquajourneyswimschool.com/water-safety
 
 ---
 
@@ -410,7 +410,7 @@ Not meeting these milestones yet? That's completely normal — every child learn
 Our pool is heated to 90°F year-round, so there's never a bad time for lessons.
 
 **[BUTTON: View Class Schedule]**
-→ https://www.aquajourneyswimschool.com/classes
+→ https://app.aquajourneyswimschool.com/enroll
 
 ---
 
@@ -483,7 +483,7 @@ Traveling somewhere with water? Remember:
 Every year, families wait until June and find classes full. Beat the rush — enroll now for spring and summer sessions.
 
 **[BUTTON: Reserve Your Spot]**
-→ https://www.aquajourneyswimschool.com/classes
+→ https://app.aquajourneyswimschool.com/enroll
 
 ---
 
@@ -492,7 +492,7 @@ Every year, families wait until June and find classes full. Beat the rush — en
 Know a family with young kids? **Gift cards** make a meaningful present that could save a life.
 
 **[BUTTON: Buy a Gift Card]**
-→ https://www.aquajourneyswimschool.com/gift-cards
+→ https://aquajourneyswimschool.com/gift-cards
 
 ---
 

@@ -2,11 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY;
 const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID;
+const MAILERLITE_HOLIDAY_GROUP_ID = '198609645899613532';
 const MAILERLITE_API_URL = 'https://connect.mailerlite.com/api';
 
 export async function POST(request: NextRequest) {
   try {
-    const { email } = await request.json();
+    const { email, source } = await request.json();
 
     if (!email) {
       return NextResponse.json(
@@ -23,6 +24,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Determine which group to add subscriber to
+    const groupId = source === 'holiday_packages'
+      ? MAILERLITE_HOLIDAY_GROUP_ID
+      : MAILERLITE_GROUP_ID;
+
     // Add subscriber to MailerLite
     const response = await fetch(`${MAILERLITE_API_URL}/subscribers`, {
       method: 'POST',
@@ -34,7 +40,7 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({
         email,
         status: 'active',
-        groups: MAILERLITE_GROUP_ID ? [MAILERLITE_GROUP_ID] : [],
+        groups: groupId ? [groupId] : [],
       }),
     });
 

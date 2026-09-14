@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
 import GiftCardPurchaseForm from '@/components/GiftCardPurchaseForm';
+import HolidayBanner from '@/components/HolidayBanner';
 
 export const metadata: Metadata = {
   title: 'Gift Cards | Aqua Journey Swim School | Ormond Beach, FL',
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
 export default function GiftCardsPage() {
   return (
     <>
+      <HolidayBanner />
+
       <HeroSection
         title="Gift Cards"
         description="Give the gift of swimming—a skill that lasts a lifetime."
@@ -42,7 +45,7 @@ export default function GiftCardsPage() {
                 </svg>
               </div>
               <h3 className="font-semibold text-lg mb-2">Flexible Amounts</h3>
-              <p className="text-[var(--gray)] text-sm">Choose from $25 to $500 for the perfect gift.</p>
+              <p className="text-[var(--gray)] text-sm">Choose any amount for the perfect gift.</p>
             </div>
 
             <div className="text-center p-6">

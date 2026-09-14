@@ -57,3 +57,30 @@ export const FORMSPREE_IDS = {
   contact: 'xrekqlpz',           // Existing contact form
   newsletter: 'meelppoa',        // Newsletter signup form
 } as const;
+
+// Gift Card Configuration
+export const GIFT_CARD_CONFIG = {
+  presetAmounts: [25, 50, 75, 100, 150, 200],
+  minAmount: 25,
+  maxAmount: 500,
+  deliveryMethods: [
+    {
+      id: 'email',
+      label: 'Email Delivery',
+      description: 'Virtual gift card sent instantly to recipient\'s email',
+      icon: 'email',
+    },
+    {
+      id: 'mail',
+      label: 'Mail Delivery',
+      description: 'Physical gift card mailed to recipient (5-7 business days)',
+      icon: 'mail',
+    },
+    {
+      id: 'pickup',
+      label: 'Local Pickup',
+      description: 'Pick up at our Ormond Beach location',
+      icon: 'pickup',
+    },
+  ],
+} as const;

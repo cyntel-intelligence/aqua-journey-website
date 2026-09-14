@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
+import GiftCardPurchaseForm from '@/components/GiftCardPurchaseForm';
 
 export const metadata: Metadata = {
   title: 'Gift Cards | Aqua Journey Swim School | Ormond Beach, FL',
@@ -29,7 +30,7 @@ export default function GiftCardsPage() {
               The Perfect Gift for Any Occasion
             </h2>
             <p className="text-lg text-[var(--gray)] max-w-2xl mx-auto">
-              Whether it's a birthday, holiday, baby shower, or just because—an Aqua Journey gift card is a meaningful gift that helps keep children safe around water.
+              Whether it&apos;s a birthday, holiday, baby shower, or just because—an Aqua Journey gift card is a meaningful gift that helps keep children safe around water.
             </p>
           </div>
 
@@ -40,8 +41,8 @@ export default function GiftCardsPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-lg mb-2">Any Amount</h3>
-              <p className="text-[var(--gray)] text-sm">Choose the perfect amount for your gift.</p>
+              <h3 className="font-semibold text-lg mb-2">Flexible Amounts</h3>
+              <p className="text-[var(--gray)] text-sm">Choose from $25 to $500 for the perfect gift.</p>
             </div>
 
             <div className="text-center p-6">
@@ -65,19 +66,12 @@ export default function GiftCardsPage() {
             </div>
           </div>
 
-          <div className="text-center">
-            <a
-              href="https://buy.stripe.com/3cI5kD7ev3HYeoC2uIcQU00"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-white px-10 py-4 rounded-lg font-semibold text-lg transition-colors"
-              aria-label="Purchase a Gift Card (opens in new tab)"
-            >
+          {/* Purchase Form */}
+          <div className="bg-[var(--gray-light)] rounded-2xl p-8 md:p-10">
+            <h3 className="text-2xl font-bold text-[var(--foreground)] mb-6 text-center">
               Purchase a Gift Card
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </a>
+            </h3>
+            <GiftCardPurchaseForm />
           </div>
         </div>
       </section>
@@ -95,7 +89,7 @@ export default function GiftCardsPage() {
                 1
               </div>
               <h3 className="font-semibold text-lg mb-2">Purchase Online</h3>
-              <p className="text-[var(--gray)]">Select your amount and complete your purchase securely online.</p>
+              <p className="text-[var(--gray)]">Select your amount, delivery method, and complete your purchase securely.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 text-center">
@@ -103,7 +97,7 @@ export default function GiftCardsPage() {
                 2
               </div>
               <h3 className="font-semibold text-lg mb-2">Receive Your Gift Card</h3>
-              <p className="text-[var(--gray)]">Get it via email, mail, or pick up at our facility.</p>
+              <p className="text-[var(--gray)]">Get it via email instantly, by mail, or pick up at our facility.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 text-center">

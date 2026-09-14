@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { render } from '@react-email/render';
 import { stripe, generateGiftCardCode, type DeliveryMethod } from '@/lib/stripe';
 import { resend, EMAIL_FROM, BUSINESS_EMAIL } from '@/lib/email/resend';
 import GiftCardReceiptEmail from '@/lib/email/templates/gift-card-receipt';
@@ -66,55 +67,62 @@ export async function POST(request: NextRequest) {
       console.log('Sending gift card emails...');
       console.log(`Buyer: ${buyerEmail}, Recipient: ${recipientEmail}, Delivery: ${deliveryMethod}`);
 
+      // Pre-render email templates to HTML
+      const receiptHtml = await render(GiftCardReceiptEmail({
+        buyerName,
+        recipientName,
+        amount,
+        deliveryMethod: deliveryMethod as DeliveryMethod,
+        giftCardCode: deliveryMethod === 'email' ? giftCardCode : undefined,
+        personalMessage: personalMessage || undefined,
+      }));
+
       // 1. Send receipt to buyer
       const receiptResult = await resend.emails.send({
         from: EMAIL_FROM,
         to: buyerEmail,
         subject: 'Your Aqua Journey Gift Card Purchase Confirmation',
-        react: GiftCardReceiptEmail({
-          buyerName,
-          recipientName,
-          amount,
-          deliveryMethod: deliveryMethod as DeliveryMethod,
-          giftCardCode: deliveryMethod === 'email' ? giftCardCode : undefined,
-          personalMessage: personalMessage || undefined,
-        }),
+        html: receiptHtml,
       });
       console.log('Receipt email sent:', receiptResult);
 
       // 2. Send gift card to recipient (email delivery only)
       if (deliveryMethod === 'email' && recipientEmail) {
+        const deliveryHtml = await render(GiftCardDeliveryEmail({
+          recipientName,
+          buyerName,
+          amount,
+          giftCardCode,
+          personalMessage: personalMessage || undefined,
+        }));
+
         const deliveryResult = await resend.emails.send({
           from: EMAIL_FROM,
           to: recipientEmail,
           subject: `${buyerName} sent you an Aqua Journey Gift Card!`,
-          react: GiftCardDeliveryEmail({
-            recipientName,
-            buyerName,
-            amount,
-            giftCardCode,
-            personalMessage: personalMessage || undefined,
-          }),
+          html: deliveryHtml,
         });
         console.log('Delivery email sent:', deliveryResult);
       }
 
       // 3. Send notification to business
+      const notificationHtml = await render(GiftCardNotificationEmail({
+        buyerName,
+        buyerEmail,
+        recipientName,
+        recipientEmail: recipientEmail || undefined,
+        recipientAddress: parsedAddress,
+        amount,
+        deliveryMethod: deliveryMethod as DeliveryMethod,
+        giftCardCode,
+        personalMessage: personalMessage || undefined,
+      }));
+
       const notificationResult = await resend.emails.send({
         from: EMAIL_FROM,
         to: BUSINESS_EMAIL,
         subject: `New Gift Card Purchase - ${deliveryMethod.toUpperCase()}`,
-        react: GiftCardNotificationEmail({
-          buyerName,
-          buyerEmail,
-          recipientName,
-          recipientEmail: recipientEmail || undefined,
-          recipientAddress: parsedAddress,
-          amount,
-          deliveryMethod: deliveryMethod as DeliveryMethod,
-          giftCardCode,
-          personalMessage: personalMessage || undefined,
-        }),
+        html: notificationHtml,
       });
       console.log('Notification email sent:', notificationResult);
 

@@ -13,6 +13,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Missing signature' }, { status: 400 });
   }
 
+  // Check if required services are configured
+  if (!stripe) {
+    console.error('Stripe is not configured - missing STRIPE_SECRET_KEY');
+    return NextResponse.json({ error: 'Stripe not configured' }, { status: 500 });
+  }
+
+  if (!resend) {
+    console.error('Resend is not configured - missing RESEND_API_KEY');
+    return NextResponse.json({ error: 'Email service not configured' }, { status: 500 });
+  }
+
   let event;
 
   try {
@@ -52,8 +63,11 @@ export async function POST(request: NextRequest) {
     const parsedAddress = recipientAddress ? JSON.parse(recipientAddress) : undefined;
 
     try {
+      console.log('Sending gift card emails...');
+      console.log(`Buyer: ${buyerEmail}, Recipient: ${recipientEmail}, Delivery: ${deliveryMethod}`);
+
       // 1. Send receipt to buyer
-      await resend.emails.send({
+      const receiptResult = await resend.emails.send({
         from: EMAIL_FROM,
         to: buyerEmail,
         subject: 'Your Aqua Journey Gift Card Purchase Confirmation',
@@ -66,10 +80,11 @@ export async function POST(request: NextRequest) {
           personalMessage: personalMessage || undefined,
         }),
       });
+      console.log('Receipt email sent:', receiptResult);
 
       // 2. Send gift card to recipient (email delivery only)
       if (deliveryMethod === 'email' && recipientEmail) {
-        await resend.emails.send({
+        const deliveryResult = await resend.emails.send({
           from: EMAIL_FROM,
           to: recipientEmail,
           subject: `${buyerName} sent you an Aqua Journey Gift Card!`,
@@ -81,10 +96,11 @@ export async function POST(request: NextRequest) {
             personalMessage: personalMessage || undefined,
           }),
         });
+        console.log('Delivery email sent:', deliveryResult);
       }
 
       // 3. Send notification to business
-      await resend.emails.send({
+      const notificationResult = await resend.emails.send({
         from: EMAIL_FROM,
         to: BUSINESS_EMAIL,
         subject: `New Gift Card Purchase - ${deliveryMethod.toUpperCase()}`,
@@ -100,6 +116,7 @@ export async function POST(request: NextRequest) {
           personalMessage: personalMessage || undefined,
         }),
       });
+      console.log('Notification email sent:', notificationResult);
 
       console.log(`Gift card ${giftCardCode} processed successfully`);
     } catch (emailError) {

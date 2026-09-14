@@ -1,10 +1,10 @@
 import { Resend } from 'resend';
 
-if (!process.env.RESEND_API_KEY) {
-  throw new Error('RESEND_API_KEY is not set in environment variables');
-}
+const resendApiKey = process.env.RESEND_API_KEY;
 
-export const resend = new Resend(process.env.RESEND_API_KEY);
+export const resend = resendApiKey
+  ? new Resend(resendApiKey)
+  : (null as unknown as Resend);
 
 export const EMAIL_FROM = 'Aqua Journey Swim School <noreply@aquajourneyswimschool.com>';
 export const BUSINESS_EMAIL = 'info@aquajourneyswimschool.com';

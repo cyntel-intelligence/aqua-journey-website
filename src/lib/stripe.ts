@@ -1,13 +1,13 @@
 import Stripe from 'stripe';
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('STRIPE_SECRET_KEY is not set in environment variables');
-}
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2026-08-26.dahlia',
-  typescript: true,
-});
+export const stripe = stripeSecretKey
+  ? new Stripe(stripeSecretKey, {
+      apiVersion: '2026-08-26.dahlia',
+      typescript: true,
+    })
+  : (null as unknown as Stripe);
 
 export type DeliveryMethod = 'email' | 'mail' | 'pickup';
 

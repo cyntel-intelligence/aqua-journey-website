@@ -86,7 +86,7 @@ export default function HolidayBanner() {
               placeholder="Enter your email"
               required
               disabled={status === 'submitting'}
-              className="w-full sm:w-64 px-4 py-2 rounded-lg text-sm focus:ring-2 focus:ring-white focus:outline-none"
+              className="w-full sm:w-64 px-4 py-2 rounded-lg text-sm bg-white border-2 border-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:outline-none shadow-md"
             />
             <button
               type="submit"

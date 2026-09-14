@@ -5,6 +5,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://aquajourneyswimsch
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if Stripe is configured
+    if (!stripe) {
+      console.error('Stripe is not configured - missing STRIPE_SECRET_KEY');
+      return NextResponse.json(
+        { error: 'Payment system is not configured' },
+        { status: 500 }
+      );
+    }
+
     const data: GiftCardPurchaseData = await request.json();
 
     // Validate required fields
@@ -73,8 +82,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ sessionId: session.id, url: session.url });
   } catch (error) {
     console.error('Error creating checkout session:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return NextResponse.json(
-      { error: 'Failed to create checkout session' },
+      { error: `Failed to create checkout session: ${errorMessage}` },
       { status: 500 }
     );
   }

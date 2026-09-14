@@ -175,8 +175,7 @@ export default function GiftCardPurchaseForm() {
             placeholder="Custom amount"
             value={formData.customAmount}
             onChange={(e) => handleCustomAmountChange(e.target.value)}
-            min={GIFT_CARD_CONFIG.minAmount}
-            max={GIFT_CARD_CONFIG.maxAmount}
+            min={1}
             className={`w-full pl-8 pr-4 py-3 rounded-lg border-2 text-lg transition-all ${
               isCustomAmount
                 ? 'border-[var(--primary)] ring-2 ring-[var(--primary)] ring-offset-2'
@@ -185,7 +184,7 @@ export default function GiftCardPurchaseForm() {
           />
         </div>
         <p className="text-sm text-[var(--gray)] mt-2">
-          Min: ${GIFT_CARD_CONFIG.minAmount} | Max: ${GIFT_CARD_CONFIG.maxAmount}
+          Enter any amount
         </p>
       </div>
 

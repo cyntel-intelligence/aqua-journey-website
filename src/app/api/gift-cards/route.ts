@@ -8,9 +8,9 @@ export async function POST(request: NextRequest) {
     const data: GiftCardPurchaseData = await request.json();
 
     // Validate required fields
-    if (!data.amount || data.amount < 25 || data.amount > 500) {
+    if (!data.amount || data.amount < 1) {
       return NextResponse.json(
-        { error: 'Amount must be between $25 and $500' },
+        { error: 'Amount must be at least $1' },
         { status: 400 }
       );
     }

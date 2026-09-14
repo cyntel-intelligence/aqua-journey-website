@@ -61,8 +61,8 @@ export const FORMSPREE_IDS = {
 // Gift Card Configuration
 export const GIFT_CARD_CONFIG = {
   presetAmounts: [25, 50, 75, 100, 150, 200],
-  minAmount: 25,
-  maxAmount: 500,
+  minAmount: 1,
+  maxAmount: 10000,
   deliveryMethods: [
     {
       id: 'email',

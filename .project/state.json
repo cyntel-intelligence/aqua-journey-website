@@ -2,7 +2,7 @@
   "project_name": "aqua-journey-email-capture",
   "project_tla": "AQJ",
   "created": "2026-02-23 13:11:01 EST",
-  "last_updated": "2026-09-14 15:47:50 EDT",
+  "last_updated": "2026-09-30 14:04:05 EDT",
   "current_phase": "3 - Polish & Launch",
   "phase_started": "2026-04-21",
   "completed_tasks": [
@@ -33,19 +33,30 @@
     "Holiday packages coming soon banner with signup form",
     "MailerLite holiday packages group integration",
     "Fixed Railway SSL certificate (re-added custom domain)",
-    "Fixed React 19 email rendering compatibility"
+    "Fixed React 19 email rendering compatibility",
+    "Add Scholarships link to header nav (was footer-only)",
+    "Add Volusia County (CFAB) scholarship card to /scholarships with fillable PDF download",
+    "Publish fillable scholarship application at /volusia-county-scholarship-application.pdf",
+    "Note in Getting Started that Volusia applications go through Aqua Journey directly",
+    "Move Testimonials and Water Safety out of top nav to footer-only",
+    "Add FAQ 'Scholarships & Financial Assistance' section (4 Q&As, JSON-LD 15->19)",
+    "Update FAQ attendance/cancellation policy with drop-request and change-request forms",
+    "Remove Home from top nav; add aria-label to logo link"
   ],
   "active_tasks": [],
-  "pending_tasks": ["See .project/BACKLOG.md for full backlog"],
+  "pending_tasks": [
+    "See .project/BACKLOG.md for full backlog"
+  ],
   "blockers": [],
   "next_actions": {
     "ai_tasks": [],
     "human_tasks": [
+      "Carly: Confirm the prepaid multi-week tuition credit policy is retired (removed from FAQ under week-to-week billing)",
       "Carly: Test gift card purchase flow end-to-end",
       "Carly: Configure Stripe webhook in production if not done",
       "Carly: Upload email templates to MailerLite (from previous session)"
     ],
     "blocked_on": []
   },
-  "notes": "Session 7: Gift card system complete with Stripe + Resend emails. Holiday banner added. Railway SSL fixed."
+  "notes": "Session 8: Scholarship content shipped (nav link, Volusia/CFAB card, fillable PDF, FAQ section). FAQ attendance policy updated with drop/change forms. Nav slimmed: Testimonials/Water Safety footer-only, Home removed. Decision: scholarship copy deliberately omits a child age range (site and PDF) - settled, do not re-raise. All work merged to main and deployed; 5 commits d8a5f23..f8c3f31."
 }

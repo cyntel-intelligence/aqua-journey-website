@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 type FaqItem = {
   q: string;
   a: string;
-  link?: { href: string; label: string };
+  links?: { href: string; label: string }[];
 };
 
 type FaqCategory = {
@@ -81,7 +81,11 @@ const faqs: FaqCategory[] = [
       },
       {
         q: 'What is your attendance and cancellation policy?',
-        a: 'We reserve a specific time slot for your child—you are paying for your time slot, not individual lessons. We do not offer credits or make-ups for missed lessons. To change or stop lessons, please submit a withdrawal notice 7 days before your final lesson. If you have prepaid for multiple weeks and provide proper notice, we will credit any tuition beyond the 7-day notice period to your account, valid for one year.',
+        a: 'Your child keeps the same weekly time slot until they finish the program or you let us know otherwise, and tuition is billed week to week—there is no large upfront package. Because your tuition reserves that specific slot, we are not able to offer make-ups or credits for missed lessons. To stop or change lessons, give us 7 days notice using the forms below. Drop requests must be submitted by 5pm on the Thursday of the week before you want to unenroll. Tuition continues to be charged automatically until a drop form is submitted.',
+        links: [
+          { href: 'https://app.aquajourneyswimschool.com/forms/drop-request', label: 'Submit a drop request' },
+          { href: 'https://app.aquajourneyswimschool.com/forms/change-request', label: 'Request a change' },
+        ],
       },
       {
         q: 'What happens if my child is sick?',
@@ -112,22 +116,22 @@ const faqs: FaqCategory[] = [
       {
         q: 'Do you offer scholarships or financial assistance?',
         a: 'Yes. If cost is a barrier, we may be able to help. We offer our own need-based scholarship through Volusia County, and we also accept scholarship funding from several partner organizations. Every child deserves the chance to learn water safety, and these programs make lessons more affordable for many families.',
-        link: { href: '/scholarships', label: 'See all scholarship options' },
+        links: [{ href: '/scholarships', label: 'See all scholarship options' }],
       },
       {
         q: 'What is the Volusia County Water Safety Scholarship?',
         a: 'This is our own need-based scholarship, funded in part by Volusia County through its Children and Families Advisory Board (CFAB). For qualifying Volusia County families, it covers 75%-100% of the full Survival Swim program, including the one-time $60 registration fee. Awards are based on financial need.',
-        link: { href: '/scholarships', label: 'Download the application' },
+        links: [{ href: '/scholarships', label: 'Download the application' }],
       },
       {
         q: 'How do I apply for the Volusia County scholarship?',
         a: 'Applications go through Aqua Journey directly, not through an outside organization. Download the application from our scholarships page, fill it out on your computer or by hand, then bring it to our front desk along with the required documents. You will need a photo ID, your two most recent pay stubs, and your most recent tax return; the full list is on the application. Our front desk staff can make copies for you, and applications cannot be reviewed until all documents are received.',
-        link: { href: '/scholarships', label: 'Start your application' },
+        links: [{ href: '/scholarships', label: 'Start your application' }],
       },
       {
         q: 'Do you accept scholarships from other organizations?',
         a: 'Yes. We work with Step Up for Students, the Down Syndrome Foundation, and the Make A Splash Foundation. For these programs you apply through the organization itself, then contact us once you are approved so we can enroll your child using the funds.',
-        link: { href: '/scholarships', label: 'Learn about our partner organizations' },
+        links: [{ href: '/scholarships', label: 'Learn about our partner organizations' }],
       },
     ],
   },
@@ -183,16 +187,37 @@ export default function FAQPage() {
                       <p className="text-[var(--gray)] pl-9">
                         {faq.a}
                       </p>
-                      {faq.link && (
-                        <Link
-                          href={faq.link.href}
-                          className="inline-flex items-center gap-1.5 ml-9 mt-3 text-[var(--primary)] hover:text-[var(--primary-dark)] font-semibold transition-colors"
-                        >
-                          {faq.link.label}
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
+                      {faq.links && (
+                        <div className="pl-9 mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                          {faq.links.map((link) =>
+                            link.href.startsWith('http') ? (
+                              <a
+                                key={link.href}
+                                href={link.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1.5 text-[var(--primary)] hover:text-[var(--primary-dark)] font-semibold transition-colors"
+                                aria-label={`${link.label} (opens in new tab)`}
+                              >
+                                {link.label}
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                              </a>
+                            ) : (
+                              <Link
+                                key={link.href}
+                                href={link.href}
+                                className="inline-flex items-center gap-1.5 text-[var(--primary)] hover:text-[var(--primary-dark)] font-semibold transition-colors"
+                              >
+                                {link.label}
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </Link>
+                            )
+                          )}
+                        </div>
                       )}
                     </div>
                   ))}

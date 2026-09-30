@@ -9,6 +9,7 @@ const navigation = [
   { name: 'About', href: '/about' },
   { name: 'Classes', href: '/classes' },
   { name: 'Water Safety', href: '/water-safety' },
+  { name: 'Scholarships', href: '/scholarships' },
   { name: 'Testimonials', href: '/testimonials' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },
@@ -63,7 +64,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 lg:space-x-5 xl:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}

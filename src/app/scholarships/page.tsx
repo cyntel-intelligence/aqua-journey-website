@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
+import { BUSINESS_INFO } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Scholarships | Aqua Journey Swim School | Ormond Beach, FL',
-  description: 'Scholarship opportunities for swim lessons in Ormond Beach at Aqua Journey Swim School. Partners include Step Up for Students, Down Syndrome Foundation, and Make A Splash Foundation.',
-  keywords: 'swim lesson scholarships, Step Up for Students swimming, affordable swim lessons Florida, swim scholarship Ormond Beach, Down Syndrome swimming',
+  description: 'Scholarship opportunities for swim lessons in Ormond Beach at Aqua Journey Swim School. Download the Volusia County Water Safety Scholarship application, plus partners including Step Up for Students, Down Syndrome Foundation, and Make A Splash Foundation.',
+  keywords: 'swim lesson scholarships, Volusia County water safety scholarship, CFAB scholarship, Step Up for Students swimming, affordable swim lessons Florida, swim scholarship Ormond Beach, Down Syndrome swimming',
 };
 
 const partners = [
@@ -80,6 +81,50 @@ export default function ScholarshipsPage() {
             </p>
           </div>
 
+          {/* Volusia County — featured, applications handled by us */}
+          <div className="bg-white rounded-2xl shadow-sm p-8 md:p-10 mb-12 border-t-4 border-[var(--secondary)]">
+            <div className="flex flex-col md:flex-row md:items-start gap-8">
+              <div className="w-20 h-20 bg-[var(--secondary)] rounded-full flex items-center justify-center flex-shrink-0 mx-auto md:mx-0">
+                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold text-[var(--foreground)] mb-4">
+                  Volusia County Water Safety Scholarship
+                </h3>
+                <p className="text-[var(--gray)] mb-6">
+                  We&apos;re proud to partner with Volusia County, through its Children and Families Advisory Board (CFAB), to offer need-based scholarships for Volusia County families.
+                </p>
+
+                <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+                  <a
+                    href="/volusia-county-scholarship-application.pdf"
+                    download
+                    className="inline-flex items-center justify-center gap-2 bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    Download Application (PDF)
+                  </a>
+                  <span className="text-sm text-[var(--gray)]">
+                    Complete the application and bring it to our front desk with the required documents (listed on the application).
+                  </span>
+                </div>
+
+                <p className="text-[var(--gray)]">
+                  Questions? Call{' '}
+                  <a href={BUSINESS_INFO.phoneLink} className="text-[var(--primary)] hover:text-[var(--primary-dark)] font-semibold transition-colors">
+                    {BUSINESS_INFO.phone}
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {partners.map((partner) => (
               <div key={partner.name} className="bg-white rounded-2xl p-8 text-center shadow-sm">
@@ -113,6 +158,13 @@ export default function ScholarshipsPage() {
             <h2 className="text-3xl font-bold text-[var(--foreground)] mb-4">How to Get Started</h2>
           </div>
 
+          <div className="max-w-3xl mx-auto mb-12 bg-[var(--gray-light)] border-l-4 border-[var(--secondary)] rounded-lg p-6">
+            <p className="text-[var(--foreground)]">
+              <span className="font-semibold">Applying for the Volusia County scholarship?</span>{' '}
+              These steps apply to our partner organizations. Volusia County Water Safety Scholarship applications go through Aqua Journeys directly &mdash; download the application above, then bring it to our front desk with your required documents. No separate partner application is needed.
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-14 h-14 bg-[var(--primary)] text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">
@@ -127,7 +179,7 @@ export default function ScholarshipsPage() {
                 2
               </div>
               <h3 className="font-semibold text-lg mb-2">Apply for Funding</h3>
-              <p className="text-[var(--gray)]">Complete the application process directly through the scholarship organization.</p>
+              <p className="text-[var(--gray)]">Complete the application process directly through the scholarship organization &mdash; except for the Volusia County scholarship, which you apply for through us.</p>
             </div>
 
             <div className="text-center p-6">

@@ -5,11 +5,22 @@ import HeroSection from '@/components/HeroSection';
 
 export const metadata: Metadata = {
   title: 'FAQ | Aqua Journey Swim School | Ormond Beach, FL',
-  description: 'Find answers to frequently asked questions about swim lessons at Aqua Journey Swim School in Ormond Beach, FL. Learn about our classes, policies, and what to expect.',
-  keywords: 'swim lesson FAQ, swimming questions, what to expect swim lessons, swim school policies, Ormond Beach swim FAQ',
+  description: 'Find answers to frequently asked questions about swim lessons at Aqua Journey Swim School in Ormond Beach, FL. Learn about our classes, policies, scholarships and financial assistance, and what to expect.',
+  keywords: 'swim lesson FAQ, swimming questions, what to expect swim lessons, swim school policies, Ormond Beach swim FAQ, swim lesson scholarships, Volusia County water safety scholarship, financial assistance swim lessons',
 };
 
-const faqs = [
+type FaqItem = {
+  q: string;
+  a: string;
+  link?: { href: string; label: string };
+};
+
+type FaqCategory = {
+  category: string;
+  questions: FaqItem[];
+};
+
+const faqs: FaqCategory[] = [
   {
     category: 'Getting Started',
     questions: [
@@ -95,6 +106,31 @@ const faqs = [
       },
     ],
   },
+  {
+    category: 'Scholarships & Financial Assistance',
+    questions: [
+      {
+        q: 'Do you offer scholarships or financial assistance?',
+        a: 'Yes. If cost is a barrier, we may be able to help. We offer our own need-based scholarship through Volusia County, and we also accept scholarship funding from several partner organizations. Every child deserves the chance to learn water safety, and these programs make lessons more affordable for many families.',
+        link: { href: '/scholarships', label: 'See all scholarship options' },
+      },
+      {
+        q: 'What is the Volusia County Water Safety Scholarship?',
+        a: 'This is our own need-based scholarship, funded in part by Volusia County through its Children and Families Advisory Board (CFAB). For qualifying Volusia County families, it covers 75%-100% of the full Survival Swim program, including the one-time $60 registration fee. Awards are based on financial need.',
+        link: { href: '/scholarships', label: 'Download the application' },
+      },
+      {
+        q: 'How do I apply for the Volusia County scholarship?',
+        a: 'Applications go through Aqua Journey directly, not through an outside organization. Download the application from our scholarships page, fill it out on your computer or by hand, then bring it to our front desk along with the required documents. You will need a photo ID, your two most recent pay stubs, and your most recent tax return; the full list is on the application. Our front desk staff can make copies for you, and applications cannot be reviewed until all documents are received.',
+        link: { href: '/scholarships', label: 'Start your application' },
+      },
+      {
+        q: 'Do you accept scholarships from other organizations?',
+        a: 'Yes. We work with Step Up for Students, the Down Syndrome Foundation, and the Make A Splash Foundation. For these programs you apply through the organization itself, then contact us once you are approved so we can enroll your child using the funds.',
+        link: { href: '/scholarships', label: 'Learn about our partner organizations' },
+      },
+    ],
+  },
 ];
 
 // Generate FAQ schema for JSON-LD
@@ -147,6 +183,17 @@ export default function FAQPage() {
                       <p className="text-[var(--gray)] pl-9">
                         {faq.a}
                       </p>
+                      {faq.link && (
+                        <Link
+                          href={faq.link.href}
+                          className="inline-flex items-center gap-1.5 ml-9 mt-3 text-[var(--primary)] hover:text-[var(--primary-dark)] font-semibold transition-colors"
+                        >
+                          {faq.link.label}
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      )}
                     </div>
                   ))}
                 </div>

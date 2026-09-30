@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 
 const navigation = [
-  { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Classes', href: '/classes' },
   { name: 'Scholarships', href: '/scholarships' },
@@ -50,7 +49,7 @@ export default function Header() {
       <nav ref={menuRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 relative">
           {/* Logo - centered on mobile */}
-          <Link href="/" className="flex items-center md:relative absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0">
+          <Link href="/" aria-label="Aqua Journey Swim School, home" className="flex items-center md:relative absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0">
             <Image
               src="/logo.png"
               alt="Aqua Journey Swim School"

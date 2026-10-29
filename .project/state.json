@@ -2,7 +2,7 @@
   "project_name": "aqua-journey-email-capture",
   "project_tla": "AQJ",
   "created": "2026-02-23 13:11:01 EST",
-  "last_updated": "2026-10-29 13:39:02 PDT",
+  "last_updated": "2026-10-29 13:52:00 PDT",
   "current_phase": "3 - Polish & Launch",
   "phase_started": "2026-04-21",
   "completed_tasks": [
@@ -47,7 +47,8 @@
     "Holiday package buyer receipt + business notification emails via Stripe webhook",
     "Link packages to live Stripe products (prod_VX3uAj2JWlyGtb, prod_VX3xwEYDRQJD9J) for sales reports",
     "Holiday packages callout on gift card page; sitemap entry",
-    "Verified production checkout and emails with $1 hidden test purchase (test page removed)"
+    "Verified production checkout and emails with $1 hidden test purchase (test page removed)",
+    "Holiday banner shown site-wide via root layout (hidden on /holiday-packages pages)"
   ],
   "active_tasks": [],
   "pending_tasks": [

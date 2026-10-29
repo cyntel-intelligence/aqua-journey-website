@@ -80,7 +80,7 @@ export default function GiftCardsPage() {
                 🎄 Holiday Swim Packages Are Here! 🎁
               </span>
               <span className="block text-[var(--gray)] mb-3">
-                Lessons plus holiday bonuses at our only discount of the year. Limited packages available.
+                Lessons plus holiday goodies at our only discount of the year. Limited packages available.
               </span>
               <span className="inline-block font-semibold text-[var(--secondary)]">
                 See Holiday Packages →

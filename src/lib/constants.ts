@@ -109,6 +109,7 @@ export const HOLIDAY_PACKAGES = {
         '$10 Snack Shack punch card',
         '$10 Aqua Swim Store credit',
       ],
+      hidden: false,
     },
     {
       id: 'refresher',
@@ -123,6 +124,20 @@ export const HOLIDAY_PACKAGES = {
         'Aqua Journeys towel',
         '$10 Aqua Swim Store credit',
       ],
+      hidden: false,
+    },
+    // TEMPORARY: $1 test purchase to verify emails. Only reachable at
+    // /holiday-packages/test-checkout. Remove after testing.
+    {
+      id: 'test',
+      name: 'TEST Package (do not fulfill)',
+      stripeProductId: null,
+      tagline: 'Internal $1 test purchase.',
+      price: 1,
+      value: 1,
+      highlight: 'Test',
+      includes: ['Test purchase - refund after checking emails'],
+      hidden: true,
     },
   ],
 } as const;

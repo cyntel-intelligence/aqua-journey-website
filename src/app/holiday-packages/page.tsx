@@ -36,7 +36,7 @@ export default function HolidayPackagesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {HOLIDAY_PACKAGES.packages.map((pkg) => (
+            {HOLIDAY_PACKAGES.packages.filter((pkg) => !pkg.hidden).map((pkg) => (
               <div
                 key={pkg.id}
                 className="flex flex-col bg-[var(--gray-light)] rounded-2xl p-8 border-2 border-transparent hover:border-[var(--primary)] transition-colors"

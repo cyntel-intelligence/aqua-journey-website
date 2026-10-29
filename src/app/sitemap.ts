@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { HOLIDAY_PACKAGES } from '@/lib/constants';
 
 // Use a fixed date for sitemap to prevent unnecessary changes on each build
 // Update this date when actual content changes are made
@@ -63,5 +64,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    ...(HOLIDAY_PACKAGES.enabled
+      ? [
+          {
+            url: `${baseUrl}/holiday-packages`,
+            lastModified,
+            changeFrequency: 'weekly' as const,
+            priority: 0.8,
+          },
+        ]
+      : []),
   ];
 }

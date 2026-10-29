@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
 import GiftCardPurchaseForm from '@/components/GiftCardPurchaseForm';
 import HolidayBanner from '@/components/HolidayBanner';
+import { HOLIDAY_PACKAGES } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Gift Cards | Aqua Journey Swim School | Ormond Beach, FL',
@@ -68,6 +69,24 @@ export default function GiftCardsPage() {
               <p className="text-[var(--gray)] text-sm">Give the lifelong gift of water safety.</p>
             </div>
           </div>
+
+          {/* Holiday Packages callout (seasonal) */}
+          {HOLIDAY_PACKAGES.enabled && (
+            <Link
+              href="/holiday-packages"
+              className="block mb-12 bg-orange-50 border-2 border-[var(--secondary)] rounded-2xl p-6 text-center hover:bg-orange-100 transition-colors"
+            >
+              <span className="block text-xl font-bold text-[var(--foreground)] mb-1">
+                🎄 Holiday Swim Packages Are Here! 🎁
+              </span>
+              <span className="block text-[var(--gray)] mb-3">
+                Lessons plus holiday bonuses at our only discount of the year. Limited packages available.
+              </span>
+              <span className="inline-block font-semibold text-[var(--secondary)]">
+                See Holiday Packages →
+              </span>
+            </Link>
+          )}
 
           {/* Purchase Form */}
           <div className="bg-[var(--gray-light)] rounded-2xl p-8 md:p-10">

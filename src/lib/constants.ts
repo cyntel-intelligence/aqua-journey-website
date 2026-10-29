@@ -84,3 +84,47 @@ export const GIFT_CARD_CONFIG = {
     },
   ],
 } as const;
+
+// Holiday Packages (seasonal)
+// Set `enabled: false` after the holidays to hide the banner, the
+// /holiday-packages page, the gift card page callout, and stop new checkouts.
+export const HOLIDAY_PACKAGES = {
+  enabled: true,
+  packages: [
+    {
+      id: 'holiday-swim',
+      name: 'Holiday Swim Package',
+      tagline: 'Full program package — the gift of confidence, safety & a lifetime skill.',
+      price: 840,
+      value: 1070,
+      highlight: '32 Swim Lessons + Registration Fee',
+      includes: [
+        '32 swim lessons + registration fee',
+        'Aqua Journeys reusable swim bag',
+        'Aqua Journeys towel',
+        'Swim toy',
+        '$10 Snack Shack punch card',
+        '$10 Aqua Swim Store credit',
+      ],
+    },
+    {
+      id: 'refresher',
+      name: 'Refresher Package',
+      tagline: 'Brush up, build confidence, and keep the skills going this season.',
+      price: 300,
+      value: 386,
+      highlight: '12 Swim Lessons',
+      includes: [
+        '12 swim lessons',
+        'Aqua Journeys towel',
+        '$10 Aqua Swim Store credit',
+      ],
+    },
+  ],
+} as const;
+
+export type HolidayPackageId = (typeof HOLIDAY_PACKAGES.packages)[number]['id'];
+
+export function getHolidayPackage(id: string) {
+  return HOLIDAY_PACKAGES.packages.find((pkg) => pkg.id === id);
+}

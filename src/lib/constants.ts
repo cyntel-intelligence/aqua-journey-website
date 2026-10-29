@@ -88,12 +88,15 @@ export const GIFT_CARD_CONFIG = {
 // Holiday Packages (seasonal)
 // Set `enabled: false` after the holidays to hide the banner, the
 // /holiday-packages page, the gift card page callout, and stop new checkouts.
+// stripeProductId (live-mode prod_...) is the Stripe product sales are
+// recorded under for reports; the price always comes from `price` below.
 export const HOLIDAY_PACKAGES = {
   enabled: true,
   packages: [
     {
       id: 'holiday-swim',
       name: 'Holiday Swim Package',
+      stripeProductId: 'prod_VX3uAj2JWlyGtb',
       tagline: 'Full program package — the gift of confidence, safety & a lifetime skill.',
       price: 840,
       value: 1070,
@@ -110,6 +113,7 @@ export const HOLIDAY_PACKAGES = {
     {
       id: 'refresher',
       name: 'Refresher Package',
+      stripeProductId: 'prod_VX3xwEYDRQJD9J',
       tagline: 'Brush up, build confidence, and keep the skills going this season.',
       price: 300,
       value: 386,

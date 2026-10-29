@@ -37,10 +37,7 @@ export async function POST(request: NextRequest) {
         {
           price_data: {
             currency: 'usd',
-            product_data: {
-              name: `Aqua Journey ${pkg.name}`,
-              description: pkg.includes.join(' • '),
-            },
+            product: pkg.stripeProductId,
             unit_amount: pkg.price * 100,
           },
           quantity: 1,

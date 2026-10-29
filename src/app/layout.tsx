@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HolidayBanner from "@/components/HolidayBanner";
 import EmailPopup from "@/components/EmailPopup";
 
 const geistSans = Geist({
@@ -188,6 +189,7 @@ export default function RootLayout({
         </a>
         <Header />
         <main id="main-content" className="min-h-screen">
+          <HolidayBanner />
           {children}
         </main>
         <Footer />

@@ -1,8 +1,14 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { HOLIDAY_PACKAGES } from '@/lib/constants';
 
 export default function HolidayBanner() {
-  if (!HOLIDAY_PACKAGES.enabled) {
+  const pathname = usePathname();
+
+  // Shown site-wide, except on the holiday packages pages themselves
+  if (!HOLIDAY_PACKAGES.enabled || pathname.startsWith('/holiday-packages')) {
     return null;
   }
 

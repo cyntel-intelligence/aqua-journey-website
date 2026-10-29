@@ -2,7 +2,6 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/HeroSection';
 import GiftCardPurchaseForm from '@/components/GiftCardPurchaseForm';
-import HolidayBanner from '@/components/HolidayBanner';
 import { HOLIDAY_PACKAGES } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -14,8 +13,6 @@ export const metadata: Metadata = {
 export default function GiftCardsPage() {
   return (
     <>
-      <HolidayBanner />
-
       <HeroSection
         title="Gift Cards"
         description="Give the gift of swimming—a skill that lasts a lifetime."

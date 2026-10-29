@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 import EmailSignup from '@/components/EmailSignup';
-import HolidayBanner from '@/components/HolidayBanner';
 
 export const metadata: Metadata = {
   title: 'Swim Lessons in Ormond Beach, FL | Aqua Journey Swim School',
@@ -20,8 +19,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <HolidayBanner />
-
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[var(--primary)] to-[var(--primary-dark)] text-white">
         <div className="absolute inset-0 bg-[url('/wave-pattern.svg')] opacity-10"></div>

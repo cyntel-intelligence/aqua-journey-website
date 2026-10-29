@@ -39,3 +39,11 @@ confirmation that prepayment is genuinely gone.
 ## 2026-09-30 — Logo is the canonical route home
 Home removed from the top nav as a duplicate of the logo link. Logo carries
 aria-label "Aqua Journey Swim School, home" so screen readers still get it.
+
+## 2026-10-29 — Holiday packages live on their own page
+Packages sit at /holiday-packages, separate from gift cards, behind one flag
+(HOLIDAY_PACKAGES.enabled in src/lib/constants.ts) so they're removed in one
+line after the holidays. Sold through the site's Stripe Checkout, not Payment
+Links, to keep the receipt/notification emails and the off switch. Copy makes no
+promise to schedule lessons (gift buyers aren't the registering parent) and says
+"goodies", not "bonuses".

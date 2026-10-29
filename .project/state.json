@@ -2,7 +2,7 @@
   "project_name": "aqua-journey-email-capture",
   "project_tla": "AQJ",
   "created": "2026-02-23 13:11:01 EST",
-  "last_updated": "2026-10-29 12:47:51 PDT",
+  "last_updated": "2026-10-29 13:39:02 PDT",
   "current_phase": "3 - Polish & Launch",
   "phase_started": "2026-04-21",
   "completed_tasks": [
@@ -41,7 +41,13 @@
     "Move Testimonials and Water Safety out of top nav to footer-only",
     "Add FAQ 'Scholarships & Financial Assistance' section (4 Q&As, JSON-LD 15->19)",
     "Update FAQ attendance/cancellation policy with drop-request and change-request forms",
-    "Remove Home from top nav; add aria-label to logo link"
+    "Remove Home from top nav; add aria-label to logo link",
+    "Holiday banner now announces packages are available, links to /holiday-packages",
+    "New /holiday-packages page (Holiday Swim $840, Refresher $300) with Stripe Checkout",
+    "Holiday package buyer receipt + business notification emails via Stripe webhook",
+    "Link packages to live Stripe products (prod_VX3uAj2JWlyGtb, prod_VX3xwEYDRQJD9J) for sales reports",
+    "Holiday packages callout on gift card page; sitemap entry",
+    "Verified production checkout and emails with $1 hidden test purchase (test page removed)"
   ],
   "active_tasks": [],
   "pending_tasks": [
@@ -49,14 +55,17 @@
   ],
   "blockers": [],
   "next_actions": {
-    "ai_tasks": [],
+    "ai_tasks": [
+      "After the holidays: set HOLIDAY_PACKAGES.enabled = false in src/lib/constants.ts"
+    ],
     "human_tasks": [
+      "Carly: Refund the $1 holiday package test payment in Stripe",
+      "Carly: Email MailerLite holiday 'Notify Me' group that packages are live",
+      "Carly: Ask accountant about FL sales tax on physical items in packages",
       "Carly: Confirm the prepaid multi-week tuition credit policy is retired (removed from FAQ under week-to-week billing)",
-      "Carly: Test gift card purchase flow end-to-end",
-      "Carly: Configure Stripe webhook in production if not done",
       "Carly: Upload email templates to MailerLite (from previous session)"
     ],
     "blocked_on": []
   },
-  "notes": "Session 9: No project changes. Upgraded the claude-code CLI (brew 2.1.236 -> 2.1.308) and inspected repo state - main clean and in sync with origin at 1eaba00. Session 8 human_tasks still open and carried forward."
+  "notes": "Session 10: Launched Holiday Packages. One flag (HOLIDAY_PACKAGES.enabled) hides banner, page, gift card callout and blocks checkout. Copy avoids promising scheduling (buyers may be grandparents) and uses 'goodies' not 'bonuses'. Stripe webhook + Resend confirmed working in production, so gift card test/webhook tasks closed."
 }
